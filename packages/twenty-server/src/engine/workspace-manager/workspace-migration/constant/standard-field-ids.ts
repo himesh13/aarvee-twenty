@@ -547,6 +547,104 @@ export const DASHBOARD_STANDARD_FIELD_IDS = {
   searchVector: '20202020-0bcc-47a4-8360-2e35a7133f7a',
 } as const;
 
+// Lead Management System Field IDs
+export const LEAD_STANDARD_FIELD_IDS = {
+  leadNo: '20202020-lead-f001-0001-100000000001',
+  customerName: '20202020-lead-f002-0002-100000000002',
+  contactNumber: '20202020-lead-f003-0003-100000000003',
+  product: '20202020-lead-f004-0004-100000000004',
+  loanAmount: '20202020-lead-f005-0005-100000000005',
+  locationText: '20202020-lead-f006-0006-100000000006',
+  locationLat: '20202020-lead-f007-0007-100000000007',
+  locationLng: '20202020-lead-f008-0008-100000000008',
+  referredBy: '20202020-lead-f009-0009-100000000009',
+  shortDescription: '20202020-lead-f00a-000a-10000000000a',
+  status: '20202020-lead-f00b-000b-10000000000b',
+  position: '20202020-lead-f00c-000c-10000000000c',
+  createdBy: '20202020-lead-f00d-000d-10000000000d',
+  updatedBy: '20202020-lead-f00e-000e-10000000000e',
+  searchVector: '20202020-lead-f00f-000f-10000000000f',
+  assignedTo: '20202020-lead-f010-0010-100000000010',
+  taskTargets: '20202020-lead-f011-0011-100000000011',
+  noteTargets: '20202020-lead-f012-0012-100000000012',
+  favorites: '20202020-lead-f013-0013-100000000013',
+  attachments: '20202020-lead-f014-0014-100000000014',
+  timelineActivities: '20202020-lead-f015-0015-100000000015',
+} as const;
+
+export const LEAD_BUSINESS_DETAIL_STANDARD_FIELD_IDS = {
+  employmentType: '20202020-lbd-f001-0001-200000000001',
+  industry: '20202020-lbd-f002-0002-200000000002',
+  ownership: '20202020-lbd-f003-0003-200000000003',
+  businessType: '20202020-lbd-f004-0004-200000000004',
+  constitution: '20202020-lbd-f005-0005-200000000005',
+  yearsInBusiness: '20202020-lbd-f006-0006-200000000006',
+  monthlyNetSalary: '20202020-lbd-f007-0007-200000000007',
+  otherInfo: '20202020-lbd-f008-0008-200000000008',
+  createdBy: '20202020-lbd-f009-0009-200000000009',
+  updatedBy: '20202020-lbd-f00a-000a-20000000000a',
+  lead: '20202020-lbd-f00b-000b-20000000000b',
+} as const;
+
+export const PROPERTY_STANDARD_FIELD_IDS = {
+  type: '20202020-prop-f001-0001-300000000001',
+  isNewPurchase: '20202020-prop-f002-0002-300000000002',
+  isBuilderPurchase: '20202020-prop-f003-0003-300000000003',
+  readyPossession: '20202020-prop-f004-0004-300000000004',
+  classification: '20202020-prop-f005-0005-300000000005',
+  value: '20202020-prop-f006-0006-300000000006',
+  saleDeedValue: '20202020-prop-f007-0007-300000000007',
+  area: '20202020-prop-f008-0008-300000000008',
+  areaUnit: '20202020-prop-f009-0009-300000000009',
+  ageYears: '20202020-prop-f00a-000a-30000000000a',
+  address: '20202020-prop-f00b-000b-30000000000b',
+  otherInfo: '20202020-prop-f00c-000c-30000000000c',
+  position: '20202020-prop-f00d-000d-30000000000d',
+  createdBy: '20202020-prop-f00e-000e-30000000000e',
+  updatedBy: '20202020-prop-f00f-000f-30000000000f',
+  lead: '20202020-prop-f010-0010-300000000010',
+} as const;
+
+export const COMPANY_PARTY_STANDARD_FIELD_IDS = {
+  role: '20202020-comp-f001-0001-400000000001',
+  name: '20202020-comp-f002-0002-400000000002',
+  pan: '20202020-comp-f003-0003-400000000003',
+  regNo: '20202020-comp-f004-0004-400000000004',
+  regType: '20202020-comp-f005-0005-400000000005',
+  contactNumbers: '20202020-comp-f006-0006-400000000006',
+  doi: '20202020-comp-f007-0007-400000000007',
+  email: '20202020-comp-f008-0008-400000000008',
+  website: '20202020-comp-f009-0009-400000000009',
+  officeAddress: '20202020-comp-f00a-000a-40000000000a',
+  factoryAddress: '20202020-comp-f00b-000b-40000000000b',
+  factorySameAsOffice: '20202020-comp-f00c-000c-40000000000c',
+  premisesType: '20202020-comp-f00d-000d-40000000000d',
+  yearsOffice: '20202020-comp-f00e-000e-40000000000e',
+  yearsFactory: '20202020-comp-f00f-000f-40000000000f',
+  loginCode: '20202020-comp-f010-0010-400000000010',
+  otherInfo: '20202020-comp-f011-0011-400000000011',
+  position: '20202020-comp-f012-0012-400000000012',
+  createdBy: '20202020-comp-f013-0013-400000000013',
+  updatedBy: '20202020-comp-f014-0014-400000000014',
+  lead: '20202020-comp-f015-0015-400000000015',
+} as const;
+
+export const CATALOG_PRODUCT_STANDARD_FIELD_IDS = {
+  name: '20202020-catp-f001-0001-500000000001',
+  isActive: '20202020-catp-f002-0002-500000000002',
+  position: '20202020-catp-f003-0003-500000000003',
+  createdBy: '20202020-catp-f004-0004-500000000004',
+  updatedBy: '20202020-catp-f005-0005-500000000005',
+} as const;
+
+export const CATALOG_STATUS_STANDARD_FIELD_IDS = {
+  name: '20202020-cats-f001-0001-600000000001',
+  isActive: '20202020-cats-f002-0002-600000000002',
+  position: '20202020-cats-f003-0003-600000000003',
+  createdBy: '20202020-cats-f004-0004-600000000004',
+  updatedBy: '20202020-cats-f005-0005-600000000005',
+} as const;
+
 export const STANDARD_OBJECT_FIELD_IDS = {
   activityTarget: ACTIVITY_TARGET_STANDARD_FIELD_IDS,
   activity: ACTIVITY_STANDARD_FIELD_IDS,
@@ -585,4 +683,11 @@ export const STANDARD_OBJECT_FIELD_IDS = {
   workflowRun: WORKFLOW_RUN_STANDARD_FIELD_IDS,
   workflowVersion: WORKFLOW_VERSION_STANDARD_FIELD_IDS,
   workspaceMember: WORKSPACE_MEMBER_STANDARD_FIELD_IDS,
+  // Lead Management System
+  lead: LEAD_STANDARD_FIELD_IDS,
+  leadBusinessDetail: LEAD_BUSINESS_DETAIL_STANDARD_FIELD_IDS,
+  property: PROPERTY_STANDARD_FIELD_IDS,
+  companyParty: COMPANY_PARTY_STANDARD_FIELD_IDS,
+  catalogProduct: CATALOG_PRODUCT_STANDARD_FIELD_IDS,
+  catalogStatus: CATALOG_STATUS_STANDARD_FIELD_IDS,
 } as const;
