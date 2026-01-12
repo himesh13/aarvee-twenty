@@ -49,4 +49,23 @@ export const STANDARD_OBJECT_IDS = {
   workflowVersion: '20202020-d65d-4ab9-9344-d77bfb376a3d',
   workspaceMember: '20202020-3319-4234-a34c-82d5c0e881a6',
   workflowAutomatedTrigger: '20202020-3319-4234-a34c-7f3b9d2e4d1f',
+  // Lead Management System objects
+  lead: '20202020-lead-4001-8001-100000000001',
+  leadBusinessDetail: '20202020-lead-4002-8002-100000000002',
+  leadNote: '20202020-lead-4003-8003-100000000003',
+  leadDocument: '20202020-lead-4004-8004-100000000004',
+  property: '20202020-lead-4005-8005-100000000005',
+  vehicle: '20202020-lead-4006-8006-100000000006',
+  machinery: '20202020-lead-4007-8007-100000000007',
+  companyParty: '20202020-lead-4008-8008-100000000008',
+  individualParty: '20202020-lead-4009-8009-100000000009',
+  reference: '20202020-lead-400a-800a-10000000000a',
+  disbursement: '20202020-lead-400b-800b-10000000000b',
+  existingLoan: '20202020-lead-400c-800c-10000000000c',
+  // Catalog objects
+  catalogProduct: '20202020-cat1-4001-8001-200000000001',
+  catalogStatus: '20202020-cat1-4002-8002-200000000002',
+  catalogFinancer: '20202020-cat1-4003-8003-200000000003',
+  catalogLoanType: '20202020-cat1-4004-8004-200000000004',
+  catalogPropertyType: '20202020-cat1-4005-8005-200000000005',
 } as const;
