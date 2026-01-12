@@ -645,6 +645,144 @@ export const CATALOG_STATUS_STANDARD_FIELD_IDS = {
   updatedBy: '20202020-cats-f005-0005-600000000005',
 } as const;
 
+export const CATALOG_FINANCER_STANDARD_FIELD_IDS = {
+  name: '20202020-catf-f001-0001-700000000001',
+  isActive: '20202020-catf-f002-0002-700000000002',
+  position: '20202020-catf-f003-0003-700000000003',
+  createdBy: '20202020-catf-f004-0004-700000000004',
+  updatedBy: '20202020-catf-f005-0005-700000000005',
+} as const;
+
+export const CATALOG_LOAN_TYPE_STANDARD_FIELD_IDS = {
+  name: '20202020-calt-f001-0001-800000000001',
+  isActive: '20202020-calt-f002-0002-800000000002',
+  position: '20202020-calt-f003-0003-800000000003',
+  createdBy: '20202020-calt-f004-0004-800000000004',
+  updatedBy: '20202020-calt-f005-0005-800000000005',
+} as const;
+
+export const CATALOG_PROPERTY_TYPE_STANDARD_FIELD_IDS = {
+  name: '20202020-capt-f001-0001-900000000001',
+  isActive: '20202020-capt-f002-0002-900000000002',
+  position: '20202020-capt-f003-0003-900000000003',
+  createdBy: '20202020-capt-f004-0004-900000000004',
+  updatedBy: '20202020-capt-f005-0005-900000000005',
+} as const;
+
+export const INDIVIDUAL_PARTY_STANDARD_FIELD_IDS = {
+  role: '20202020-indp-f001-0001-a00000000001',
+  name: '20202020-indp-f002-0002-a00000000002',
+  contactNumbers: '20202020-indp-f003-0003-a00000000003',
+  email: '20202020-indp-f004-0004-a00000000004',
+  dob: '20202020-indp-f005-0005-a00000000005',
+  maritalStatus: '20202020-indp-f006-0006-a00000000006',
+  gender: '20202020-indp-f007-0007-a00000000007',
+  residenceType: '20202020-indp-f008-0008-a00000000008',
+  residenceAddress: '20202020-indp-f009-0009-a00000000009',
+  permanentAddress: '20202020-indp-f00a-000a-a0000000000a',
+  permSameAsRes: '20202020-indp-f00b-000b-a0000000000b',
+  motherMaidenName: '20202020-indp-f00c-000c-a0000000000c',
+  pan: '20202020-indp-f00d-000d-a0000000000d',
+  aadhar: '20202020-indp-f00e-000e-a0000000000e',
+  education: '20202020-indp-f00f-000f-a0000000000f',
+  businessDetails: '20202020-indp-f010-0010-a00000000010',
+  yearsOnResidence: '20202020-indp-f011-0011-a00000000011',
+  position: '20202020-indp-f012-0012-a00000000012',
+  createdBy: '20202020-indp-f013-0013-a00000000013',
+  updatedBy: '20202020-indp-f014-0014-a00000000014',
+  lead: '20202020-indp-f015-0015-a00000000015',
+} as const;
+
+export const LEAD_NOTE_STANDARD_FIELD_IDS = {
+  body: '20202020-lnot-f001-0001-b00000000001',
+  position: '20202020-lnot-f002-0002-b00000000002',
+  createdBy: '20202020-lnot-f003-0003-b00000000003',
+  updatedBy: '20202020-lnot-f004-0004-b00000000004',
+  lead: '20202020-lnot-f005-0005-b00000000005',
+} as const;
+
+export const LEAD_DOCUMENT_STANDARD_FIELD_IDS = {
+  category: '20202020-ldoc-f001-0001-c00000000001',
+  fileUrl: '20202020-ldoc-f002-0002-c00000000002',
+  caption: '20202020-ldoc-f003-0003-c00000000003',
+  position: '20202020-ldoc-f004-0004-c00000000004',
+  createdBy: '20202020-ldoc-f005-0005-c00000000005',
+  updatedBy: '20202020-ldoc-f006-0006-c00000000006',
+  lead: '20202020-ldoc-f007-0007-c00000000007',
+} as const;
+
+export const EXISTING_LOAN_STANDARD_FIELD_IDS = {
+  financer: '20202020-exln-f001-0001-d00000000001',
+  loanType: '20202020-exln-f002-0002-d00000000002',
+  tenureMonths: '20202020-exln-f003-0003-d00000000003',
+  paidEmiMonths: '20202020-exln-f004-0004-d00000000004',
+  emiAmount: '20202020-exln-f005-0005-d00000000005',
+  remainingTenure: '20202020-exln-f006-0006-d00000000006',
+  position: '20202020-exln-f007-0007-d00000000007',
+  createdBy: '20202020-exln-f008-0008-d00000000008',
+  updatedBy: '20202020-exln-f009-0009-d00000000009',
+  lead: '20202020-exln-f00a-000a-d0000000000a',
+} as const;
+
+export const VEHICLE_STANDARD_FIELD_IDS = {
+  brand: '20202020-vehi-f001-0001-e00000000001',
+  model: '20202020-vehi-f002-0002-e00000000002',
+  subModel: '20202020-vehi-f003-0003-e00000000003',
+  mfgYear: '20202020-vehi-f004-0004-e00000000004',
+  insuranceValidity: '20202020-vehi-f005-0005-e00000000005',
+  position: '20202020-vehi-f006-0006-e00000000006',
+  createdBy: '20202020-vehi-f007-0007-e00000000007',
+  updatedBy: '20202020-vehi-f008-0008-e00000000008',
+  lead: '20202020-vehi-f009-0009-e00000000009',
+} as const;
+
+export const MACHINERY_STANDARD_FIELD_IDS = {
+  brand: '20202020-mach-f001-0001-f00000000001',
+  model: '20202020-mach-f002-0002-f00000000002',
+  purchaseValue: '20202020-mach-f003-0003-f00000000003',
+  purchaseYear: '20202020-mach-f004-0004-f00000000004',
+  description: '20202020-mach-f005-0005-f00000000005',
+  position: '20202020-mach-f006-0006-f00000000006',
+  createdBy: '20202020-mach-f007-0007-f00000000007',
+  updatedBy: '20202020-mach-f008-0008-f00000000008',
+  lead: '20202020-mach-f009-0009-f00000000009',
+} as const;
+
+export const REFERENCE_STANDARD_FIELD_IDS = {
+  name: '20202020-refe-f001-0001-110000000001',
+  firmName: '20202020-refe-f002-0002-110000000002',
+  address: '20202020-refe-f003-0003-110000000003',
+  mobile: '20202020-refe-f004-0004-110000000004',
+  relationship: '20202020-refe-f005-0005-110000000005',
+  position: '20202020-refe-f006-0006-110000000006',
+  createdBy: '20202020-refe-f007-0007-110000000007',
+  updatedBy: '20202020-refe-f008-0008-110000000008',
+  lead: '20202020-refe-f009-0009-110000000009',
+} as const;
+
+export const DISBURSEMENT_STANDARD_FIELD_IDS = {
+  financer: '20202020-disb-f001-0001-120000000001',
+  loanType: '20202020-disb-f002-0002-120000000002',
+  accountNo: '20202020-disb-f003-0003-120000000003',
+  amount: '20202020-disb-f004-0004-120000000004',
+  roiPct: '20202020-disb-f005-0005-120000000005',
+  tenureMonths: '20202020-disb-f006-0006-120000000006',
+  processingFee: '20202020-disb-f007-0007-120000000007',
+  emi: '20202020-disb-f008-0008-120000000008',
+  preEmi: '20202020-disb-f009-0009-120000000009',
+  firstEmiDate: '20202020-disb-f00a-000a-12000000000a',
+  lastEmiDate: '20202020-disb-f00b-000b-12000000000b',
+  loanCoverInsurance: '20202020-disb-f00c-000c-12000000000c',
+  propertyInsurance: '20202020-disb-f00d-000d-12000000000d',
+  registerMortgage: '20202020-disb-f00e-000e-12000000000e',
+  registerMortgageExpense: '20202020-disb-f00f-000f-12000000000f',
+  otherExpenses: '20202020-disb-f010-0010-120000000010',
+  paymentDetails: '20202020-disb-f011-0011-120000000011',
+  createdBy: '20202020-disb-f012-0012-120000000012',
+  updatedBy: '20202020-disb-f013-0013-120000000013',
+  lead: '20202020-disb-f014-0014-120000000014',
+} as const;
+
 export const STANDARD_OBJECT_FIELD_IDS = {
   activityTarget: ACTIVITY_TARGET_STANDARD_FIELD_IDS,
   activity: ACTIVITY_STANDARD_FIELD_IDS,
@@ -688,6 +826,17 @@ export const STANDARD_OBJECT_FIELD_IDS = {
   leadBusinessDetail: LEAD_BUSINESS_DETAIL_STANDARD_FIELD_IDS,
   property: PROPERTY_STANDARD_FIELD_IDS,
   companyParty: COMPANY_PARTY_STANDARD_FIELD_IDS,
+  individualParty: INDIVIDUAL_PARTY_STANDARD_FIELD_IDS,
+  leadNote: LEAD_NOTE_STANDARD_FIELD_IDS,
+  leadDocument: LEAD_DOCUMENT_STANDARD_FIELD_IDS,
+  existingLoan: EXISTING_LOAN_STANDARD_FIELD_IDS,
+  vehicle: VEHICLE_STANDARD_FIELD_IDS,
+  machinery: MACHINERY_STANDARD_FIELD_IDS,
+  reference: REFERENCE_STANDARD_FIELD_IDS,
+  disbursement: DISBURSEMENT_STANDARD_FIELD_IDS,
   catalogProduct: CATALOG_PRODUCT_STANDARD_FIELD_IDS,
   catalogStatus: CATALOG_STATUS_STANDARD_FIELD_IDS,
+  catalogFinancer: CATALOG_FINANCER_STANDARD_FIELD_IDS,
+  catalogLoanType: CATALOG_LOAN_TYPE_STANDARD_FIELD_IDS,
+  catalogPropertyType: CATALOG_PROPERTY_TYPE_STANDARD_FIELD_IDS,
 } as const;
