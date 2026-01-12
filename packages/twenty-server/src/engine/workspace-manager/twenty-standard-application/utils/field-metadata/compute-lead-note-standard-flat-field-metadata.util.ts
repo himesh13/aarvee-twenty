@@ -1,0 +1,205 @@
+import {
+  FieldMetadataType,
+  RelationOnDeleteAction,
+  RelationType,
+} from 'twenty-shared/types';
+
+import { type FlatFieldMetadata } from 'src/engine/metadata-modules/flat-field-metadata/types/flat-field-metadata.type';
+import { type AllStandardObjectFieldName } from 'src/engine/workspace-manager/twenty-standard-application/types/all-standard-object-field-name.type';
+import {
+  type CreateStandardFieldArgs,
+  createStandardFieldFlatMetadata,
+} from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/create-standard-field-flat-metadata.util';
+import { createStandardRelationFieldFlatMetadata } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/create-standard-relation-field-flat-metadata.util';
+
+export const buildLeadNoteStandardFlatFieldMetadatas = ({
+  now,
+  objectName,
+  workspaceId,
+  standardObjectMetadataRelatedEntityIds,
+  dependencyFlatEntityMaps,
+  twentyStandardApplicationId,
+}: Omit<
+  CreateStandardFieldArgs<'leadNote', FieldMetadataType>,
+  'context'
+>): Record<AllStandardObjectFieldName<'leadNote'>, FlatFieldMetadata> => ({
+  // Base fields from BaseWorkspaceEntity
+  id: createStandardFieldFlatMetadata({
+    objectName,
+    workspaceId,
+    context: {
+      fieldName: 'id',
+      type: FieldMetadataType.UUID,
+      label: 'Id',
+      description: 'Id',
+      icon: 'Icon123',
+      isSystem: true,
+      isNullable: false,
+      isUIReadOnly: true,
+      defaultValue: 'uuid',
+    },
+    standardObjectMetadataRelatedEntityIds,
+    dependencyFlatEntityMaps,
+    twentyStandardApplicationId,
+    now,
+  }),
+  createdAt: createStandardFieldFlatMetadata({
+    objectName,
+    workspaceId,
+    context: {
+      fieldName: 'createdAt',
+      type: FieldMetadataType.DATE_TIME,
+      label: 'Creation date',
+      description: 'Creation date',
+      icon: 'IconCalendar',
+      isNullable: false,
+      isUIReadOnly: true,
+      defaultValue: 'now',
+    },
+    standardObjectMetadataRelatedEntityIds,
+    dependencyFlatEntityMaps,
+    twentyStandardApplicationId,
+    now,
+  }),
+  updatedAt: createStandardFieldFlatMetadata({
+    objectName,
+    workspaceId,
+    context: {
+      fieldName: 'updatedAt',
+      type: FieldMetadataType.DATE_TIME,
+      label: 'Last update',
+      description: 'Last time the record was changed',
+      icon: 'IconCalendarClock',
+      isNullable: false,
+      isUIReadOnly: true,
+      defaultValue: 'now',
+    },
+    standardObjectMetadataRelatedEntityIds,
+    dependencyFlatEntityMaps,
+    twentyStandardApplicationId,
+    now,
+  }),
+  deletedAt: createStandardFieldFlatMetadata({
+    objectName,
+    workspaceId,
+    context: {
+      fieldName: 'deletedAt',
+      type: FieldMetadataType.DATE_TIME,
+      label: 'Deleted at',
+      description: 'Date when the record was deleted',
+      icon: 'IconCalendarMinus',
+      isNullable: true,
+      isUIReadOnly: true,
+    },
+    standardObjectMetadataRelatedEntityIds,
+    dependencyFlatEntityMaps,
+    twentyStandardApplicationId,
+    now,
+  }),
+
+  // LeadNote-specific fields
+  body: createStandardFieldFlatMetadata({
+    objectName,
+    workspaceId,
+    context: {
+      fieldName: 'body',
+      type: FieldMetadataType.RICH_TEXT_V2,
+      label: 'Body',
+      description: 'Note content',
+      icon: 'IconNotes',
+      isNullable: true,
+    },
+    standardObjectMetadataRelatedEntityIds,
+    dependencyFlatEntityMaps,
+    twentyStandardApplicationId,
+    now,
+  }),
+  position: createStandardFieldFlatMetadata({
+    objectName,
+    workspaceId,
+    context: {
+      fieldName: 'position',
+      type: FieldMetadataType.POSITION,
+      label: 'Position',
+      description: 'Lead note record position',
+      icon: 'IconHierarchy2',
+      isSystem: true,
+      isNullable: false,
+      defaultValue: 0,
+    },
+    standardObjectMetadataRelatedEntityIds,
+    dependencyFlatEntityMaps,
+    twentyStandardApplicationId,
+    now,
+  }),
+  createdBy: createStandardFieldFlatMetadata({
+    objectName,
+    workspaceId,
+    context: {
+      fieldName: 'createdBy',
+      type: FieldMetadataType.ACTOR,
+      label: 'Created by',
+      description: 'The creator of the record',
+      icon: 'IconCreativeCommonsSa',
+      isUIReadOnly: true,
+      isNullable: false,
+      defaultValue: {
+        source: "'MANUAL'",
+        name: "'System'",
+        workspaceMemberId: null,
+      },
+    },
+    standardObjectMetadataRelatedEntityIds,
+    dependencyFlatEntityMaps,
+    twentyStandardApplicationId,
+    now,
+  }),
+  updatedBy: createStandardFieldFlatMetadata({
+    objectName,
+    workspaceId,
+    context: {
+      fieldName: 'updatedBy',
+      type: FieldMetadataType.ACTOR,
+      label: 'Updated by',
+      description: 'The workspace member who last updated the record',
+      icon: 'IconUserCircle',
+      isUIReadOnly: true,
+      isNullable: false,
+      defaultValue: {
+        source: "'MANUAL'",
+        name: "'System'",
+        workspaceMemberId: null,
+      },
+    },
+    standardObjectMetadataRelatedEntityIds,
+    dependencyFlatEntityMaps,
+    twentyStandardApplicationId,
+    now,
+  }),
+
+  // Relation fields
+  lead: createStandardRelationFieldFlatMetadata({
+    objectName,
+    workspaceId,
+    context: {
+      type: FieldMetadataType.RELATION,
+      morphId: null,
+      fieldName: 'lead',
+      label: 'Lead',
+      description: 'Lead related to the note',
+      icon: 'IconUser',
+      isNullable: false,
+      targetObjectName: 'lead',
+      targetFieldName: 'leadNotes',
+      settings: {
+        relationType: RelationType.MANY_TO_ONE,
+        onDelete: RelationOnDeleteAction.CASCADE,
+        joinColumnName: 'leadId',
+      },
+    },
+    standardObjectMetadataRelatedEntityIds,
+    dependencyFlatEntityMaps,
+    twentyStandardApplicationId,
+    now,
+  }),
+});

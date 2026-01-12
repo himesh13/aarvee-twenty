@@ -28,16 +28,43 @@ Core workspace entities have been created for the priority objects:
 - ✅ `catalog-loan-type.workspace-entity.ts` - Loan type catalog
 - ✅ `catalog-property-type.workspace-entity.ts` - Property type catalog
 
-### Phase 2: Metadata Registration (IN PROGRESS)
-The next steps involve registering these entities in Twenty's metadata system:
+### Phase 2: Metadata Registration (COMPLETE ✅)
+All entities have been fully registered in Twenty's metadata system:
 
-1. **Add to standard objects constants** - Define universal identifiers and field IDs
-2. **Create field metadata builders** - Define all fields for each object
-3. **Create object metadata builders** - Wire up object definitions
-4. **Create view metadata** - Define default views for listing/detail pages
-5. **Update TypeScript types** - Add to `AllStandardObjectName` type
+1. ✅ **Added to standard objects constants** - All 17 objects with universal identifiers and 165+ field IDs
+2. ✅ **Created field metadata builders** - All fields defined for each object (17 builders created)
+3. ✅ **Registered in system** - All builders imported and registered in `build-standard-flat-field-metadata-maps.util.ts`
+4. ✅ **Updated `standard-object.constant.ts`** - All 17 objects with complete field structures
+5. ✅ **TypeScript types updated** - `AllStandardObjectName` and `AllStandardObjectFieldName` auto-generated
 
-### Phase 3: Services & Business Logic (TODO)
+**Files created in this phase:**
+- 17 field metadata builder files (`compute-*-standard-flat-field-metadata.util.ts`)
+- Modified: `standard-field-ids.ts` (165+ field IDs)
+- Modified: `build-standard-flat-field-metadata-maps.util.ts` (all registrations)
+- Modified: `standard-object.constant.ts` (all 17 objects)
+
+### Phase 3: Testing & Validation (TODO - Next Phase)
+- [ ] Run `npx nx database:reset twenty-server` to test metadata generation
+- [ ] Verify GraphQL schema is generated correctly for all 17 objects
+- [ ] Test basic CRUD operations via GraphQL API
+- [ ] Validate all field types work correctly
+- [ ] Verify relations between objects
+
+### Phase 4: View Metadata (TODO - Optional)
+- [ ] Create default views for listing/detail pages
+- [ ] Define view fields, filters, sorts for key objects
+- [ ] Configure view permissions
+
+### Phase 5: Relation Updates (TODO)
+Update existing Twenty objects to support Lead relations:
+- [ ] Add `lead` field to AttachmentWorkspaceEntity
+- [ ] Add `lead` field to FavoriteWorkspaceEntity  
+- [ ] Add `lead` field to TaskTargetWorkspaceEntity
+- [ ] Add `lead` field to NoteTargetWorkspaceEntity
+- [ ] Add `lead` field to TimelineActivityWorkspaceEntity
+- [ ] Add `assignedLeads` relation to WorkspaceMemberWorkspaceEntity
+
+### Phase 6: Services & Business Logic (TODO)
 - Lead number generation service (LD-YYYYMM-#####)
 - Custom resolvers (duplicate, restore, autoSave, share, export)
 - Validation logic
@@ -45,7 +72,7 @@ The next steps involve registering these entities in Twenty's metadata system:
 - File upload integration
 - Reminder scheduling
 
-### Phase 4: Frontend Implementation (TODO)
+### Phase 7: Frontend Implementation (TODO)
 - Lead list/detail pages
 - Multi-step form with conditional sections
 - Party management forms
