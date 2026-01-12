@@ -34,6 +34,23 @@ import { buildWorkflowRunStandardFlatFieldMetadatas } from 'src/engine/workspace
 import { buildWorkflowStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-workflow-standard-flat-field-metadata.util';
 import { buildWorkflowVersionStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-workflow-version-standard-flat-field-metadata.util';
 import { buildWorkspaceMemberStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-workspace-member-standard-flat-field-metadata.util';
+import { buildLeadStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-lead-standard-flat-field-metadata.util';
+import { buildLeadBusinessDetailStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-lead-business-detail-standard-flat-field-metadata.util';
+import { buildPropertyStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-property-standard-flat-field-metadata.util';
+import { buildCompanyPartyStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-company-party-standard-flat-field-metadata.util';
+import { buildIndividualPartyStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-individual-party-standard-flat-field-metadata.util';
+import { buildLeadNoteStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-lead-note-standard-flat-field-metadata.util';
+import { buildLeadDocumentStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-lead-document-standard-flat-field-metadata.util';
+import { buildExistingLoanStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-existing-loan-standard-flat-field-metadata.util';
+import { buildVehicleStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-vehicle-standard-flat-field-metadata.util';
+import { buildMachineryStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-machinery-standard-flat-field-metadata.util';
+import { buildReferenceStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-reference-standard-flat-field-metadata.util';
+import { buildDisbursementStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-disbursement-standard-flat-field-metadata.util';
+import { buildCatalogProductStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-catalog-product-standard-flat-field-metadata.util';
+import { buildCatalogStatusStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-catalog-status-standard-flat-field-metadata.util';
+import { buildCatalogFinancerStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-catalog-financer-standard-flat-field-metadata.util';
+import { buildCatalogLoanTypeStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-catalog-loan-type-standard-flat-field-metadata.util';
+import { buildCatalogPropertyTypeStandardFlatFieldMetadatas } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/compute-catalog-property-type-standard-flat-field-metadata.util';
 import { type CreateStandardFieldArgs } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/create-standard-field-flat-metadata.util';
 
 type StandardFieldBuilder<P extends AllStandardObjectName> = (
@@ -74,6 +91,24 @@ const STANDARD_FLAT_FIELD_METADATA_BUILDERS_BY_OBJECT_NAME = {
   workflowRun: buildWorkflowRunStandardFlatFieldMetadatas,
   workflowVersion: buildWorkflowVersionStandardFlatFieldMetadatas,
   workspaceMember: buildWorkspaceMemberStandardFlatFieldMetadatas,
+  // Lead Management System
+  lead: buildLeadStandardFlatFieldMetadatas,
+  leadBusinessDetail: buildLeadBusinessDetailStandardFlatFieldMetadatas,
+  property: buildPropertyStandardFlatFieldMetadatas,
+  companyParty: buildCompanyPartyStandardFlatFieldMetadatas,
+  individualParty: buildIndividualPartyStandardFlatFieldMetadatas,
+  leadNote: buildLeadNoteStandardFlatFieldMetadatas,
+  leadDocument: buildLeadDocumentStandardFlatFieldMetadatas,
+  existingLoan: buildExistingLoanStandardFlatFieldMetadatas,
+  vehicle: buildVehicleStandardFlatFieldMetadatas,
+  machinery: buildMachineryStandardFlatFieldMetadatas,
+  reference: buildReferenceStandardFlatFieldMetadatas,
+  disbursement: buildDisbursementStandardFlatFieldMetadatas,
+  catalogProduct: buildCatalogProductStandardFlatFieldMetadatas,
+  catalogStatus: buildCatalogStatusStandardFlatFieldMetadatas,
+  catalogFinancer: buildCatalogFinancerStandardFlatFieldMetadatas,
+  catalogLoanType: buildCatalogLoanTypeStandardFlatFieldMetadatas,
+  catalogPropertyType: buildCatalogPropertyTypeStandardFlatFieldMetadatas,
 } satisfies {
   [P in AllStandardObjectName]: StandardFieldBuilder<P>;
 };
