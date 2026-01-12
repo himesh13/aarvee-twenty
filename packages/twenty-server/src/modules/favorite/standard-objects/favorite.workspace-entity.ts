@@ -4,6 +4,7 @@ import { type EntityRelation } from 'src/engine/workspace-manager/workspace-migr
 import { type CompanyWorkspaceEntity } from 'src/modules/company/standard-objects/company.workspace-entity';
 import { type DashboardWorkspaceEntity } from 'src/modules/dashboard/standard-objects/dashboard.workspace-entity';
 import { type FavoriteFolderWorkspaceEntity } from 'src/modules/favorite-folder/standard-objects/favorite-folder.workspace-entity';
+import { type LeadWorkspaceEntity } from 'src/modules/lead/standard-objects/lead.workspace-entity';
 import { type NoteWorkspaceEntity } from 'src/modules/note/standard-objects/note.workspace-entity';
 import { type OpportunityWorkspaceEntity } from 'src/modules/opportunity/standard-objects/opportunity.workspace-entity';
 import { type PersonWorkspaceEntity } from 'src/modules/person/standard-objects/person.workspace-entity';
@@ -37,6 +38,8 @@ export class FavoriteWorkspaceEntity extends BaseWorkspaceEntity {
   noteId: string;
   dashboard: EntityRelation<DashboardWorkspaceEntity> | null;
   dashboardId: string;
+  lead: EntityRelation<LeadWorkspaceEntity> | null;
+  leadId: string;
   viewId: string;
   custom: EntityRelation<CustomWorkspaceEntity>;
 }

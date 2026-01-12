@@ -2,6 +2,7 @@ import { BaseWorkspaceEntity } from 'src/engine/twenty-orm/base.workspace-entity
 import { type CustomWorkspaceEntity } from 'src/engine/twenty-orm/custom.workspace-entity';
 import { type EntityRelation } from 'src/engine/workspace-manager/workspace-migration/types/entity-relation.interface';
 import { type CompanyWorkspaceEntity } from 'src/modules/company/standard-objects/company.workspace-entity';
+import { type LeadWorkspaceEntity } from 'src/modules/lead/standard-objects/lead.workspace-entity';
 import { type OpportunityWorkspaceEntity } from 'src/modules/opportunity/standard-objects/opportunity.workspace-entity';
 import { type PersonWorkspaceEntity } from 'src/modules/person/standard-objects/person.workspace-entity';
 import { type TaskWorkspaceEntity } from 'src/modules/task/standard-objects/task.workspace-entity';
@@ -15,5 +16,7 @@ export class TaskTargetWorkspaceEntity extends BaseWorkspaceEntity {
   companyId: string | null;
   opportunity: EntityRelation<OpportunityWorkspaceEntity> | null;
   opportunityId: string | null;
+  lead: EntityRelation<LeadWorkspaceEntity> | null;
+  leadId: string | null;
   custom: EntityRelation<CustomWorkspaceEntity>;
 }

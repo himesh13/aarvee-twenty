@@ -5,6 +5,7 @@ import { type CustomWorkspaceEntity } from 'src/engine/twenty-orm/custom.workspa
 import { type EntityRelation } from 'src/engine/workspace-manager/workspace-migration/types/entity-relation.interface';
 import { type CompanyWorkspaceEntity } from 'src/modules/company/standard-objects/company.workspace-entity';
 import { type DashboardWorkspaceEntity } from 'src/modules/dashboard/standard-objects/dashboard.workspace-entity';
+import { type LeadWorkspaceEntity } from 'src/modules/lead/standard-objects/lead.workspace-entity';
 import { type NoteWorkspaceEntity } from 'src/modules/note/standard-objects/note.workspace-entity';
 import { type OpportunityWorkspaceEntity } from 'src/modules/opportunity/standard-objects/opportunity.workspace-entity';
 import { type PersonWorkspaceEntity } from 'src/modules/person/standard-objects/person.workspace-entity';
@@ -37,5 +38,7 @@ export class AttachmentWorkspaceEntity extends BaseWorkspaceEntity {
   dashboardId: string | null;
   workflow: EntityRelation<WorkflowWorkspaceEntity> | null;
   workflowId: string | null;
+  lead: EntityRelation<LeadWorkspaceEntity> | null;
+  leadId: string | null;
   custom: EntityRelation<CustomWorkspaceEntity>;
 }
