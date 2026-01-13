@@ -22,7 +22,10 @@ export const buildLeadBusinessDetailStandardFlatFieldMetadatas = ({
 }: Omit<
   CreateStandardFieldArgs<'leadBusinessDetail', FieldMetadataType>,
   'context'
->): Record<AllStandardObjectFieldName<'leadBusinessDetail'>, FlatFieldMetadata> => ({
+>): Record<
+  AllStandardObjectFieldName<'leadBusinessDetail'>,
+  FlatFieldMetadata
+> => ({
   id: createStandardFieldFlatMetadata({
     objectName,
     workspaceId,
