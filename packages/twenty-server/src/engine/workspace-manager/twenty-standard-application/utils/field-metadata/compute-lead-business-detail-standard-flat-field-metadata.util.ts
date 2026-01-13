@@ -1,32 +1,35 @@
-import {{
+import {
   FieldMetadataType,
   RelationOnDeleteAction,
   RelationType,
-}} from 'twenty-shared/types';
+} from 'twenty-shared/types';
 
-import {{ type FlatFieldMetadata }} from 'src/engine/metadata-modules/flat-field-metadata/types/flat-field-metadata.type';
-import {{ type AllStandardObjectFieldName }} from 'src/engine/workspace-manager/twenty-standard-application/types/all-standard-object-field-name.type';
-import {{
+import { type FlatFieldMetadata } from 'src/engine/metadata-modules/flat-field-metadata/types/flat-field-metadata.type';
+import { type AllStandardObjectFieldName } from 'src/engine/workspace-manager/twenty-standard-application/types/all-standard-object-field-name.type';
+import {
   type CreateStandardFieldArgs,
   createStandardFieldFlatMetadata,
-}} from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/create-standard-field-flat-metadata.util';
-import {{ createStandardRelationFieldFlatMetadata }} from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/create-standard-relation-field-flat-metadata.util';
+} from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/create-standard-field-flat-metadata.util';
+import { createStandardRelationFieldFlatMetadata } from 'src/engine/workspace-manager/twenty-standard-application/utils/field-metadata/create-standard-relation-field-flat-metadata.util';
 
-export const buildLeadBusinessDetailStandardFlatFieldMetadatas = ({{
+export const buildLeadBusinessDetailStandardFlatFieldMetadatas = ({
   now,
   objectName,
   workspaceId,
   standardObjectMetadataRelatedEntityIds,
   dependencyFlatEntityMaps,
   twentyStandardApplicationId,
-}}: Omit<
+}: Omit<
   CreateStandardFieldArgs<'leadBusinessDetail', FieldMetadataType>,
   'context'
->): Record<AllStandardObjectFieldName<'leadBusinessDetail'>, FlatFieldMetadata> => ({{
-  id: createStandardFieldFlatMetadata({{
+>): Record<
+  AllStandardObjectFieldName<'leadBusinessDetail'>,
+  FlatFieldMetadata
+> => ({
+  id: createStandardFieldFlatMetadata({
     objectName,
     workspaceId,
-    context: {{
+    context: {
       fieldName: 'id',
       type: FieldMetadataType.UUID,
       label: 'Id',
@@ -36,16 +39,16 @@ export const buildLeadBusinessDetailStandardFlatFieldMetadatas = ({{
       isNullable: false,
       isUIReadOnly: true,
       defaultValue: 'uuid',
-    }},
+    },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,
     twentyStandardApplicationId,
     now,
-  }}),
-  createdAt: createStandardFieldFlatMetadata({{
+  }),
+  createdAt: createStandardFieldFlatMetadata({
     objectName,
     workspaceId,
-    context: {{
+    context: {
       fieldName: 'createdAt',
       type: FieldMetadataType.DATE_TIME,
       label: 'Creation date',
@@ -54,16 +57,16 @@ export const buildLeadBusinessDetailStandardFlatFieldMetadatas = ({{
       isNullable: false,
       isUIReadOnly: true,
       defaultValue: 'now',
-    }},
+    },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,
     twentyStandardApplicationId,
     now,
-  }}),
-  updatedAt: createStandardFieldFlatMetadata({{
+  }),
+  updatedAt: createStandardFieldFlatMetadata({
     objectName,
     workspaceId,
-    context: {{
+    context: {
       fieldName: 'updatedAt',
       type: FieldMetadataType.DATE_TIME,
       label: 'Last update',
@@ -72,16 +75,16 @@ export const buildLeadBusinessDetailStandardFlatFieldMetadatas = ({{
       isNullable: false,
       isUIReadOnly: true,
       defaultValue: 'now',
-    }},
+    },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,
     twentyStandardApplicationId,
     now,
-  }}),
-  deletedAt: createStandardFieldFlatMetadata({{
+  }),
+  deletedAt: createStandardFieldFlatMetadata({
     objectName,
     workspaceId,
-    context: {{
+    context: {
       fieldName: 'deletedAt',
       type: FieldMetadataType.DATE_TIME,
       label: 'Deleted at',
@@ -89,144 +92,144 @@ export const buildLeadBusinessDetailStandardFlatFieldMetadatas = ({{
       icon: 'IconCalendarMinus',
       isNullable: true,
       isUIReadOnly: true,
-    }},
+    },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,
     twentyStandardApplicationId,
     now,
-  }}),
-  employmentType: createStandardFieldFlatMetadata({{
+  }),
+  employmentType: createStandardFieldFlatMetadata({
     objectName,
     workspaceId,
-    context: {{
+    context: {
       fieldName: 'employmentType',
       type: FieldMetadataType.TEXT,
       label: 'Employment Type',
       description: 'Type of employment',
       icon: 'IconBriefcase',
       isNullable: true,
-    }},
+    },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,
     twentyStandardApplicationId,
     now,
-  }}),
-  industry: createStandardFieldFlatMetadata({{
+  }),
+  industry: createStandardFieldFlatMetadata({
     objectName,
     workspaceId,
-    context: {{
+    context: {
       fieldName: 'industry',
       type: FieldMetadataType.TEXT,
       label: 'Industry',
       description: 'Industry type',
       icon: 'IconBuilding',
       isNullable: true,
-    }},
+    },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,
     twentyStandardApplicationId,
     now,
-  }}),
-  ownership: createStandardFieldFlatMetadata({{
+  }),
+  ownership: createStandardFieldFlatMetadata({
     objectName,
     workspaceId,
-    context: {{
+    context: {
       fieldName: 'ownership',
       type: FieldMetadataType.TEXT,
       label: 'Ownership',
       description: 'Ownership type',
       icon: 'IconUsers',
       isNullable: true,
-    }},
+    },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,
     twentyStandardApplicationId,
     now,
-  }}),
-  businessType: createStandardFieldFlatMetadata({{
+  }),
+  businessType: createStandardFieldFlatMetadata({
     objectName,
     workspaceId,
-    context: {{
+    context: {
       fieldName: 'businessType',
       type: FieldMetadataType.TEXT,
       label: 'Business Type',
       description: 'Type of business',
       icon: 'IconCategory',
       isNullable: true,
-    }},
+    },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,
     twentyStandardApplicationId,
     now,
-  }}),
-  constitution: createStandardFieldFlatMetadata({{
+  }),
+  constitution: createStandardFieldFlatMetadata({
     objectName,
     workspaceId,
-    context: {{
+    context: {
       fieldName: 'constitution',
       type: FieldMetadataType.TEXT,
       label: 'Constitution',
       description: 'Business constitution',
       icon: 'IconFileText',
       isNullable: true,
-    }},
+    },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,
     twentyStandardApplicationId,
     now,
-  }}),
-  yearsInBusiness: createStandardFieldFlatMetadata({{
+  }),
+  yearsInBusiness: createStandardFieldFlatMetadata({
     objectName,
     workspaceId,
-    context: {{
+    context: {
       fieldName: 'yearsInBusiness',
       type: FieldMetadataType.NUMBER,
       label: 'Years in Business',
       description: 'Number of years in business',
       icon: 'IconClock',
       isNullable: true,
-    }},
+    },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,
     twentyStandardApplicationId,
     now,
-  }}),
-  monthlyNetSalary: createStandardFieldFlatMetadata({{
+  }),
+  monthlyNetSalary: createStandardFieldFlatMetadata({
     objectName,
     workspaceId,
-    context: {{
+    context: {
       fieldName: 'monthlyNetSalary',
       type: FieldMetadataType.NUMBER,
       label: 'Monthly Net Salary',
       description: 'Monthly net salary or income',
       icon: 'IconCurrencyDollar',
       isNullable: true,
-    }},
+    },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,
     twentyStandardApplicationId,
     now,
-  }}),
-  otherInfo: createStandardFieldFlatMetadata({{
+  }),
+  otherInfo: createStandardFieldFlatMetadata({
     objectName,
     workspaceId,
-    context: {{
+    context: {
       fieldName: 'otherInfo',
       type: FieldMetadataType.TEXT,
       label: 'Other Information',
       description: 'Additional business information',
       icon: 'IconInfoCircle',
       isNullable: true,
-    }},
+    },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,
     twentyStandardApplicationId,
     now,
-  }}),
-  createdBy: createStandardFieldFlatMetadata({{
+  }),
+  createdBy: createStandardFieldFlatMetadata({
     objectName,
     workspaceId,
-    context: {{
+    context: {
       fieldName: 'createdBy',
       type: FieldMetadataType.ACTOR,
       label: 'Created by',
@@ -234,21 +237,21 @@ export const buildLeadBusinessDetailStandardFlatFieldMetadatas = ({{
       icon: 'IconCreativeCommonsSa',
       isUIReadOnly: true,
       isNullable: false,
-      defaultValue: {{
+      defaultValue: {
         source: "'MANUAL'",
         name: "'System'",
         workspaceMemberId: null,
-      }},
-    }},
+      },
+    },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,
     twentyStandardApplicationId,
     now,
-  }}),
-  updatedBy: createStandardFieldFlatMetadata({{
+  }),
+  updatedBy: createStandardFieldFlatMetadata({
     objectName,
     workspaceId,
-    context: {{
+    context: {
       fieldName: 'updatedBy',
       type: FieldMetadataType.ACTOR,
       label: 'Updated by',
@@ -256,21 +259,21 @@ export const buildLeadBusinessDetailStandardFlatFieldMetadatas = ({{
       icon: 'IconUserCircle',
       isUIReadOnly: true,
       isNullable: false,
-      defaultValue: {{
+      defaultValue: {
         source: "'MANUAL'",
         name: "'System'",
         workspaceMemberId: null,
-      }},
-    }},
+      },
+    },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,
     twentyStandardApplicationId,
     now,
-  }}),
-  lead: createStandardRelationFieldFlatMetadata({{
+  }),
+  lead: createStandardRelationFieldFlatMetadata({
     objectName,
     workspaceId,
-    context: {{
+    context: {
       type: FieldMetadataType.RELATION,
       morphId: null,
       fieldName: 'lead',
@@ -280,15 +283,15 @@ export const buildLeadBusinessDetailStandardFlatFieldMetadatas = ({{
       isNullable: false,
       targetObjectName: 'lead',
       targetFieldName: 'leadBusinessDetail',
-      settings: {{
+      settings: {
         relationType: RelationType.ONE_TO_ONE,
         onDelete: RelationOnDeleteAction.CASCADE,
         joinColumnName: 'leadId',
-      }},
-    }},
+      },
+    },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,
     twentyStandardApplicationId,
     now,
-  }}),
-}});
+  }),
+});
