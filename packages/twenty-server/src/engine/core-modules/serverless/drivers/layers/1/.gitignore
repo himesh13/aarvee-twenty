@@ -1,0 +1,4 @@
+# Dependencies should not be installed in the source directory during build
+# They are installed during deployment/runtime
+node_modules/
+.yarn/
