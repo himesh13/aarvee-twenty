@@ -10,14 +10,14 @@ This directory contains package definitions for AWS Lambda layers used by the se
 
 ## Why?
 
-The NestJS build process with SWC compiler scans all JavaScript files in the `src/` directory. If `node_modules/` exists here, SWC will attempt to compile test files and other JavaScript files from dependencies, which can cause build failures due to incompatible syntax (e.g., top-level return statements).
+The NestJS build process with SWC compiler scans all JavaScript files in the `src/` directory. If `node_modules/` exists here, SWC will attempt to compile test files and other JavaScript files from dependencies. This causes build failures because SWC's ES module parser does not accept top-level return statements that are valid in CommonJS test files (e.g., files in `node_modules/has-symbols/test/`).
 
 ## Build Process
 
 During the build:
 1. Only `package.json` and `yarn.lock` files are copied to the dist directory as assets
 2. The actual `node_modules/` installation happens during deployment/Lambda layer creation
-3. A `.gitignore` file ensures `node_modules/` is never committed to the repository
+3. A `.gitignore` file in each layer directory (e.g., `layers/1/.gitignore`) ensures `node_modules/` is never committed to the repository
 
 ## Deployment
 
