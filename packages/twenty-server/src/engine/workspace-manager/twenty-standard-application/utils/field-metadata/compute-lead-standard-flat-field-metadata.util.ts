@@ -152,7 +152,12 @@ export const buildLeadStandardFlatFieldMetadatas = ({
       description: 'Customer contact numbers',
       icon: 'IconPhone',
       isNullable: false,
-      defaultValue: { primaryPhoneNumber: '', primaryPhoneCountryCode: '' },
+      defaultValue: { 
+        primaryPhoneNumber: '', 
+        primaryPhoneCountryCode: '', 
+        primaryPhoneCallingCode: '',
+        additionalPhones: null 
+      },
     },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,

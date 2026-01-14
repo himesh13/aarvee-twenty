@@ -13,6 +13,17 @@ import { type NoteTargetWorkspaceEntity } from 'src/modules/note/standard-object
 import { type TaskTargetWorkspaceEntity } from 'src/modules/task/standard-objects/task-target.workspace-entity';
 import { type TimelineActivityWorkspaceEntity } from 'src/modules/timeline/standard-objects/timeline-activity.workspace-entity';
 import { type WorkspaceMemberWorkspaceEntity } from 'src/modules/workspace-member/standard-objects/workspace-member.workspace-entity';
+import { type CompanyPartyWorkspaceEntity } from 'src/modules/lead/standard-objects/company-party.workspace-entity';
+import { type IndividualPartyWorkspaceEntity } from 'src/modules/lead/standard-objects/individual-party.workspace-entity';
+import { type PropertyWorkspaceEntity } from 'src/modules/lead/standard-objects/property.workspace-entity';
+import { type VehicleWorkspaceEntity } from 'src/modules/lead/standard-objects/vehicle.workspace-entity';
+import { type MachineryWorkspaceEntity } from 'src/modules/lead/standard-objects/machinery.workspace-entity';
+import { type ExistingLoanWorkspaceEntity } from 'src/modules/lead/standard-objects/existing-loan.workspace-entity';
+import { type ReferenceWorkspaceEntity } from 'src/modules/lead/standard-objects/reference.workspace-entity';
+import { type DisbursementWorkspaceEntity } from 'src/modules/lead/standard-objects/disbursement.workspace-entity';
+import { type LeadNoteWorkspaceEntity } from 'src/modules/lead/standard-objects/lead-note.workspace-entity';
+import { type LeadDocumentWorkspaceEntity } from 'src/modules/lead/standard-objects/lead-document.workspace-entity';
+import { type LeadBusinessDetailWorkspaceEntity } from 'src/modules/lead/standard-objects/lead-business-detail.workspace-entity';
 
 const LEAD_NO_FIELD_NAME = 'leadNo';
 const CUSTOMER_NAME_FIELD_NAME = 'customerName';
@@ -44,7 +55,7 @@ export class LeadWorkspaceEntity extends BaseWorkspaceEntity {
   updatedBy: ActorMetadata;
   searchVector: string;
 
-  // Relations
+  // Relations to standard Twenty objects
   assignedTo: EntityRelation<WorkspaceMemberWorkspaceEntity> | null;
   assignedToId: string | null;
   taskTargets: EntityRelation<TaskTargetWorkspaceEntity[]>;
@@ -52,4 +63,17 @@ export class LeadWorkspaceEntity extends BaseWorkspaceEntity {
   favorites: EntityRelation<FavoriteWorkspaceEntity[]>;
   attachments: EntityRelation<AttachmentWorkspaceEntity[]>;
   timelineActivities: EntityRelation<TimelineActivityWorkspaceEntity[]>;
+
+  // Relations to Lead child objects
+  companyParties: EntityRelation<CompanyPartyWorkspaceEntity[]>;
+  individualParties: EntityRelation<IndividualPartyWorkspaceEntity[]>;
+  properties: EntityRelation<PropertyWorkspaceEntity[]>;
+  vehicles: EntityRelation<VehicleWorkspaceEntity[]>;
+  machineries: EntityRelation<MachineryWorkspaceEntity[]>;
+  existingLoans: EntityRelation<ExistingLoanWorkspaceEntity[]>;
+  references: EntityRelation<ReferenceWorkspaceEntity[]>;
+  disbursements: EntityRelation<DisbursementWorkspaceEntity[]>;
+  leadNotes: EntityRelation<LeadNoteWorkspaceEntity[]>;
+  leadDocuments: EntityRelation<LeadDocumentWorkspaceEntity[]>;
+  leadBusinessDetail: EntityRelation<LeadBusinessDetailWorkspaceEntity> | null;
 }

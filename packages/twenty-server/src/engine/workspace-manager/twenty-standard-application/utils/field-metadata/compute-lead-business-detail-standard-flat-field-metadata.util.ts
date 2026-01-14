@@ -284,7 +284,7 @@ export const buildLeadBusinessDetailStandardFlatFieldMetadatas = ({
       targetObjectName: 'lead',
       targetFieldName: 'leadBusinessDetail',
       settings: {
-        relationType: RelationType.ONE_TO_ONE,
+        relationType: RelationType.MANY_TO_ONE,
         onDelete: RelationOnDeleteAction.CASCADE,
         joinColumnName: 'leadId',
       },

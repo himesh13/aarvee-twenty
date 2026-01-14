@@ -115,7 +115,6 @@ export class LeadNumberGeneratorService {
   ): Promise<number> {
     const count = await this.leadRepository.count({
       where: {
-        workspaceId,
         leadNo: {
           startsWith: monthPrefix,
         } as any,
@@ -138,7 +137,6 @@ export class LeadNumberGeneratorService {
   ): Promise<boolean> {
     const count = await this.leadRepository.count({
       where: {
-        workspaceId,
         leadNo,
       },
     });
