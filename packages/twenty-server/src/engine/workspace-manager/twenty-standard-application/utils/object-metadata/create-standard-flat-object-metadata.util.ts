@@ -355,12 +355,16 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
-  }: Omit<CreateStandardObjectArgs<'leadBusinessDetail'>, 'context' | 'objectName'>) =>
+  }: Omit<
+    CreateStandardObjectArgs<'leadBusinessDetail'>,
+    'context' | 'objectName'
+  >) =>
     createStandardObjectFlatMetadata({
       objectName: 'leadBusinessDetail',
       dependencyFlatEntityMaps,
       context: {
-        universalIdentifier: STANDARD_OBJECTS.leadBusinessDetail.universalIdentifier,
+        universalIdentifier:
+          STANDARD_OBJECTS.leadBusinessDetail.universalIdentifier,
         nameSingular: 'leadBusinessDetail',
         namePlural: 'leadBusinessDetails',
         labelSingular: 'Lead Business Detail',
@@ -407,7 +411,10 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
-  }: Omit<CreateStandardObjectArgs<'companyParty'>, 'context' | 'objectName'>) =>
+  }: Omit<
+    CreateStandardObjectArgs<'companyParty'>,
+    'context' | 'objectName'
+  >) =>
     createStandardObjectFlatMetadata({
       objectName: 'companyParty',
       dependencyFlatEntityMaps,
@@ -433,12 +440,16 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
-  }: Omit<CreateStandardObjectArgs<'individualParty'>, 'context' | 'objectName'>) =>
+  }: Omit<
+    CreateStandardObjectArgs<'individualParty'>,
+    'context' | 'objectName'
+  >) =>
     createStandardObjectFlatMetadata({
       objectName: 'individualParty',
       dependencyFlatEntityMaps,
       context: {
-        universalIdentifier: STANDARD_OBJECTS.individualParty.universalIdentifier,
+        universalIdentifier:
+          STANDARD_OBJECTS.individualParty.universalIdentifier,
         nameSingular: 'individualParty',
         namePlural: 'individualParties',
         labelSingular: 'Individual Party',
@@ -485,7 +496,10 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
-  }: Omit<CreateStandardObjectArgs<'leadDocument'>, 'context' | 'objectName'>) =>
+  }: Omit<
+    CreateStandardObjectArgs<'leadDocument'>,
+    'context' | 'objectName'
+  >) =>
     createStandardObjectFlatMetadata({
       objectName: 'leadDocument',
       dependencyFlatEntityMaps,
@@ -511,7 +525,10 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
-  }: Omit<CreateStandardObjectArgs<'existingLoan'>, 'context' | 'objectName'>) =>
+  }: Omit<
+    CreateStandardObjectArgs<'existingLoan'>,
+    'context' | 'objectName'
+  >) =>
     createStandardObjectFlatMetadata({
       objectName: 'existingLoan',
       dependencyFlatEntityMaps,
@@ -615,7 +632,10 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
-  }: Omit<CreateStandardObjectArgs<'disbursement'>, 'context' | 'objectName'>) =>
+  }: Omit<
+    CreateStandardObjectArgs<'disbursement'>,
+    'context' | 'objectName'
+  >) =>
     createStandardObjectFlatMetadata({
       objectName: 'disbursement',
       dependencyFlatEntityMaps,
@@ -641,12 +661,16 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
-  }: Omit<CreateStandardObjectArgs<'catalogProduct'>, 'context' | 'objectName'>) =>
+  }: Omit<
+    CreateStandardObjectArgs<'catalogProduct'>,
+    'context' | 'objectName'
+  >) =>
     createStandardObjectFlatMetadata({
       objectName: 'catalogProduct',
       dependencyFlatEntityMaps,
       context: {
-        universalIdentifier: STANDARD_OBJECTS.catalogProduct.universalIdentifier,
+        universalIdentifier:
+          STANDARD_OBJECTS.catalogProduct.universalIdentifier,
         nameSingular: 'catalogProduct',
         namePlural: 'catalogProducts',
         labelSingular: 'Catalog Product',
@@ -667,7 +691,10 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
-  }: Omit<CreateStandardObjectArgs<'catalogStatus'>, 'context' | 'objectName'>) =>
+  }: Omit<
+    CreateStandardObjectArgs<'catalogStatus'>,
+    'context' | 'objectName'
+  >) =>
     createStandardObjectFlatMetadata({
       objectName: 'catalogStatus',
       dependencyFlatEntityMaps,
@@ -693,12 +720,16 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
-  }: Omit<CreateStandardObjectArgs<'catalogFinancer'>, 'context' | 'objectName'>) =>
+  }: Omit<
+    CreateStandardObjectArgs<'catalogFinancer'>,
+    'context' | 'objectName'
+  >) =>
     createStandardObjectFlatMetadata({
       objectName: 'catalogFinancer',
       dependencyFlatEntityMaps,
       context: {
-        universalIdentifier: STANDARD_OBJECTS.catalogFinancer.universalIdentifier,
+        universalIdentifier:
+          STANDARD_OBJECTS.catalogFinancer.universalIdentifier,
         nameSingular: 'catalogFinancer',
         namePlural: 'catalogFinancers',
         labelSingular: 'Catalog Financer',
@@ -719,12 +750,16 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
-  }: Omit<CreateStandardObjectArgs<'catalogLoanType'>, 'context' | 'objectName'>) =>
+  }: Omit<
+    CreateStandardObjectArgs<'catalogLoanType'>,
+    'context' | 'objectName'
+  >) =>
     createStandardObjectFlatMetadata({
       objectName: 'catalogLoanType',
       dependencyFlatEntityMaps,
       context: {
-        universalIdentifier: STANDARD_OBJECTS.catalogLoanType.universalIdentifier,
+        universalIdentifier:
+          STANDARD_OBJECTS.catalogLoanType.universalIdentifier,
         nameSingular: 'catalogLoanType',
         namePlural: 'catalogLoanTypes',
         labelSingular: 'Catalog Loan Type',
@@ -745,12 +780,16 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
     standardObjectMetadataRelatedEntityIds,
     twentyStandardApplicationId,
     dependencyFlatEntityMaps,
-  }: Omit<CreateStandardObjectArgs<'catalogPropertyType'>, 'context' | 'objectName'>) =>
+  }: Omit<
+    CreateStandardObjectArgs<'catalogPropertyType'>,
+    'context' | 'objectName'
+  >) =>
     createStandardObjectFlatMetadata({
       objectName: 'catalogPropertyType',
       dependencyFlatEntityMaps,
       context: {
-        universalIdentifier: STANDARD_OBJECTS.catalogPropertyType.universalIdentifier,
+        universalIdentifier:
+          STANDARD_OBJECTS.catalogPropertyType.universalIdentifier,
         nameSingular: 'catalogPropertyType',
         namePlural: 'catalogPropertyTypes',
         labelSingular: 'Catalog Property Type',
