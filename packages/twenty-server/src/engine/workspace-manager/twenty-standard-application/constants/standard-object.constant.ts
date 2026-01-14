@@ -2053,6 +2053,7 @@ export const STANDARD_OBJECTS = {
         },
       },
     },
+  },
   // Lead Management System Objects
   lead: {
     universalIdentifier: STANDARD_OBJECT_IDS.lead,
@@ -2407,7 +2408,6 @@ export const STANDARD_OBJECTS = {
       updatedBy: { universalIdentifier: CATALOG_PROPERTY_TYPE_STANDARD_FIELD_IDS.updatedBy },
     },
     indexes: {},
-  },
   },
 } as const satisfies Record<
   string,
