@@ -533,6 +533,7 @@ export const CUSTOM_OBJECT_STANDARD_FIELD_IDS = {
   attachments: '20202020-8d59-46ca-b7b2-73d167712134',
   timelineActivities: '20202020-f1ef-4ba4-8f33-1a4577afa477',
   searchVector: '70e56537-18ef-4811-b1c7-0a444006b815',
+  assignedLeads: '20202020-wm01-4001-8001-1a2b3c4d5e6f',
 } as const;
 
 export const DASHBOARD_STANDARD_FIELD_IDS = {
@@ -570,6 +571,17 @@ export const LEAD_STANDARD_FIELD_IDS = {
   favorites: '20202020-lead-f013-0013-100000000013',
   attachments: '20202020-lead-f014-0014-100000000014',
   timelineActivities: '20202020-lead-f015-0015-100000000015',
+  companyParties: '20202020-lead-f016-0016-100000000016',
+  individualParties: '20202020-lead-f017-0017-100000000017',
+  properties: '20202020-lead-f018-0018-100000000018',
+  vehicles: '20202020-lead-f019-0019-100000000019',
+  machineries: '20202020-lead-f01a-001a-10000000001a',
+  existingLoans: '20202020-lead-f01b-001b-10000000001b',
+  references: '20202020-lead-f01c-001c-10000000001c',
+  disbursements: '20202020-lead-f01d-001d-10000000001d',
+  leadNotes: '20202020-lead-f01e-001e-10000000001e',
+  leadDocuments: '20202020-lead-f01f-001f-10000000001f',
+  leadBusinessDetail: '20202020-lead-f020-0020-100000000020',
 } as const;
 
 export const LEAD_BUSINESS_DETAIL_STANDARD_FIELD_IDS = {

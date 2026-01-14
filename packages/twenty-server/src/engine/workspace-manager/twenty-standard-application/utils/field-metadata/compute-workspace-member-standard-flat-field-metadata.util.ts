@@ -619,4 +619,28 @@ export const buildWorkspaceMemberStandardFlatFieldMetadatas = ({
     twentyStandardApplicationId,
     now,
   }),
+  assignedLeads: createStandardRelationFieldFlatMetadata({
+    objectName,
+    workspaceId,
+    context: {
+      type: FieldMetadataType.RELATION,
+      morphId: null,
+      fieldName: 'assignedLeads',
+      label: 'Assigned Leads',
+      description: 'Leads assigned to the workspace member',
+      icon: 'IconUser',
+      isSystem: true,
+      isNullable: true,
+      isUIReadOnly: true,
+      targetObjectName: 'lead',
+      targetFieldName: 'assignedTo',
+      settings: {
+        relationType: RelationType.ONE_TO_MANY,
+      },
+    },
+    standardObjectMetadataRelatedEntityIds,
+    dependencyFlatEntityMaps,
+    twentyStandardApplicationId,
+    now,
+  }),
 });
