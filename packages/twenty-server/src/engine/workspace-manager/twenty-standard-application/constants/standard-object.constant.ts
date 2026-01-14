@@ -2010,6 +2010,9 @@ export const STANDARD_OBJECTS = {
       numberFormat: {
         universalIdentifier: WORKSPACE_MEMBER_STANDARD_FIELD_IDS.numberFormat,
       },
+      assignedLeads: {
+        universalIdentifier: WORKSPACE_MEMBER_STANDARD_FIELD_IDS.assignedLeads,
+      },
     },
     indexes: {
       userEmailUniqueIndex: {
@@ -2083,6 +2086,17 @@ export const STANDARD_OBJECTS = {
       favorites: { universalIdentifier: LEAD_STANDARD_FIELD_IDS.favorites },
       attachments: { universalIdentifier: LEAD_STANDARD_FIELD_IDS.attachments },
       timelineActivities: { universalIdentifier: LEAD_STANDARD_FIELD_IDS.timelineActivities },
+      companyParties: { universalIdentifier: LEAD_STANDARD_FIELD_IDS.companyParties },
+      individualParties: { universalIdentifier: LEAD_STANDARD_FIELD_IDS.individualParties },
+      properties: { universalIdentifier: LEAD_STANDARD_FIELD_IDS.properties },
+      vehicles: { universalIdentifier: LEAD_STANDARD_FIELD_IDS.vehicles },
+      machineries: { universalIdentifier: LEAD_STANDARD_FIELD_IDS.machineries },
+      existingLoans: { universalIdentifier: LEAD_STANDARD_FIELD_IDS.existingLoans },
+      references: { universalIdentifier: LEAD_STANDARD_FIELD_IDS.references },
+      disbursements: { universalIdentifier: LEAD_STANDARD_FIELD_IDS.disbursements },
+      leadNotes: { universalIdentifier: LEAD_STANDARD_FIELD_IDS.leadNotes },
+      leadDocuments: { universalIdentifier: LEAD_STANDARD_FIELD_IDS.leadDocuments },
+      leadBusinessDetail: { universalIdentifier: LEAD_STANDARD_FIELD_IDS.leadBusinessDetail },
     },
     indexes: {},
   },
