@@ -153,9 +153,9 @@ export const buildLeadStandardFlatFieldMetadatas = ({
       icon: 'IconPhone',
       isNullable: false,
       defaultValue: { 
-        primaryPhoneNumber: '', 
-        primaryPhoneCountryCode: '', 
-        primaryPhoneCallingCode: '',
+        primaryPhoneNumber: "''", 
+        primaryPhoneCountryCode: "''", 
+        primaryPhoneCallingCode: "''",
         additionalPhones: null 
       },
     },

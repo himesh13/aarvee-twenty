@@ -2069,10 +2069,10 @@ export const STANDARD_OBJECTS = {
   lead: {
     universalIdentifier: STANDARD_OBJECT_IDS.lead,
     fields: {
-      id: { universalIdentifier: '20202020-lead-0000-0000-000000000000' },
-      createdAt: { universalIdentifier: '20202020-lead-0001-0001-000000000001' },
-      updatedAt: { universalIdentifier: '20202020-lead-0002-0002-000000000002' },
-      deletedAt: { universalIdentifier: '20202020-lead-0003-0003-000000000003' },
+      id: { universalIdentifier: '20202020-1ead-0000-0000-000000000000' },
+      createdAt: { universalIdentifier: '20202020-1ead-0001-0001-000000000001' },
+      updatedAt: { universalIdentifier: '20202020-1ead-0002-0002-000000000002' },
+      deletedAt: { universalIdentifier: '20202020-1ead-0003-0003-000000000003' },
       leadNo: { universalIdentifier: LEAD_STANDARD_FIELD_IDS.leadNo },
       customerName: { universalIdentifier: LEAD_STANDARD_FIELD_IDS.customerName },
       contactNumber: { universalIdentifier: LEAD_STANDARD_FIELD_IDS.contactNumber },
@@ -2111,10 +2111,10 @@ export const STANDARD_OBJECTS = {
   leadBusinessDetail: {
     universalIdentifier: STANDARD_OBJECT_IDS.leadBusinessDetail,
     fields: {
-      id: { universalIdentifier: '20202020-lbde-0000-0000-000000000000' },
-      createdAt: { universalIdentifier: '20202020-lbde-0001-0001-000000000001' },
-      updatedAt: { universalIdentifier: '20202020-lbde-0002-0002-000000000002' },
-      deletedAt: { universalIdentifier: '20202020-lbde-0003-0003-000000000003' },
+      id: { universalIdentifier: '20202020-1bde-0000-0000-000000000000' },
+      createdAt: { universalIdentifier: '20202020-1bde-0001-0001-000000000001' },
+      updatedAt: { universalIdentifier: '20202020-1bde-0002-0002-000000000002' },
+      deletedAt: { universalIdentifier: '20202020-1bde-0003-0003-000000000003' },
       employmentType: { universalIdentifier: LEAD_BUSINESS_DETAIL_STANDARD_FIELD_IDS.employmentType },
       industry: { universalIdentifier: LEAD_BUSINESS_DETAIL_STANDARD_FIELD_IDS.industry },
       ownership: { universalIdentifier: LEAD_BUSINESS_DETAIL_STANDARD_FIELD_IDS.ownership },
@@ -2132,10 +2132,10 @@ export const STANDARD_OBJECTS = {
   property: {
     universalIdentifier: STANDARD_OBJECT_IDS.property,
     fields: {
-      id: { universalIdentifier: '20202020-prop-0000-0000-000000000000' },
-      createdAt: { universalIdentifier: '20202020-prop-0001-0001-000000000001' },
-      updatedAt: { universalIdentifier: '20202020-prop-0002-0002-000000000002' },
-      deletedAt: { universalIdentifier: '20202020-prop-0003-0003-000000000003' },
+      id: { universalIdentifier: '20202020-0209-0000-0000-000000000000' },
+      createdAt: { universalIdentifier: '20202020-0209-0001-0001-000000000001' },
+      updatedAt: { universalIdentifier: '20202020-0209-0002-0002-000000000002' },
+      deletedAt: { universalIdentifier: '20202020-0209-0003-0003-000000000003' },
       type: { universalIdentifier: PROPERTY_STANDARD_FIELD_IDS.type },
       isNewPurchase: { universalIdentifier: PROPERTY_STANDARD_FIELD_IDS.isNewPurchase },
       isBuilderPurchase: { universalIdentifier: PROPERTY_STANDARD_FIELD_IDS.isBuilderPurchase },
@@ -2158,10 +2158,10 @@ export const STANDARD_OBJECTS = {
   companyParty: {
     universalIdentifier: STANDARD_OBJECT_IDS.companyParty,
     fields: {
-      id: { universalIdentifier: '20202020-comp-0000-0000-000000000000' },
-      createdAt: { universalIdentifier: '20202020-comp-0001-0001-000000000001' },
-      updatedAt: { universalIdentifier: '20202020-comp-0002-0002-000000000002' },
-      deletedAt: { universalIdentifier: '20202020-comp-0003-0003-000000000003' },
+      id: { universalIdentifier: '20202020-c029-0000-0000-000000000000' },
+      createdAt: { universalIdentifier: '20202020-c029-0001-0001-000000000001' },
+      updatedAt: { universalIdentifier: '20202020-c029-0002-0002-000000000002' },
+      deletedAt: { universalIdentifier: '20202020-c029-0003-0003-000000000003' },
       role: { universalIdentifier: COMPANY_PARTY_STANDARD_FIELD_IDS.role },
       name: { universalIdentifier: COMPANY_PARTY_STANDARD_FIELD_IDS.name },
       pan: { universalIdentifier: COMPANY_PARTY_STANDARD_FIELD_IDS.pan },
@@ -2189,10 +2189,10 @@ export const STANDARD_OBJECTS = {
   individualParty: {
     universalIdentifier: STANDARD_OBJECT_IDS.individualParty,
     fields: {
-      id: { universalIdentifier: '20202020-indp-0000-0000-000000000000' },
-      createdAt: { universalIdentifier: '20202020-indp-0001-0001-000000000001' },
-      updatedAt: { universalIdentifier: '20202020-indp-0002-0002-000000000002' },
-      deletedAt: { universalIdentifier: '20202020-indp-0003-0003-000000000003' },
+      id: { universalIdentifier: '20202020-1ad2-0000-0000-000000000000' },
+      createdAt: { universalIdentifier: '20202020-1ad2-0001-0001-000000000001' },
+      updatedAt: { universalIdentifier: '20202020-1ad2-0002-0002-000000000002' },
+      deletedAt: { universalIdentifier: '20202020-1ad2-0003-0003-000000000003' },
       role: { universalIdentifier: INDIVIDUAL_PARTY_STANDARD_FIELD_IDS.role },
       name: { universalIdentifier: INDIVIDUAL_PARTY_STANDARD_FIELD_IDS.name },
       contactNumbers: { universalIdentifier: INDIVIDUAL_PARTY_STANDARD_FIELD_IDS.contactNumbers },
@@ -2220,10 +2220,10 @@ export const STANDARD_OBJECTS = {
   leadNote: {
     universalIdentifier: STANDARD_OBJECT_IDS.leadNote,
     fields: {
-      id: { universalIdentifier: '20202020-lnot-0000-0000-000000000000' },
-      createdAt: { universalIdentifier: '20202020-lnot-0001-0001-000000000001' },
-      updatedAt: { universalIdentifier: '20202020-lnot-0002-0002-000000000002' },
-      deletedAt: { universalIdentifier: '20202020-lnot-0003-0003-000000000003' },
+      id: { universalIdentifier: '20202020-1a07-0000-0000-000000000000' },
+      createdAt: { universalIdentifier: '20202020-1a07-0001-0001-000000000001' },
+      updatedAt: { universalIdentifier: '20202020-1a07-0002-0002-000000000002' },
+      deletedAt: { universalIdentifier: '20202020-1a07-0003-0003-000000000003' },
       body: { universalIdentifier: LEAD_NOTE_STANDARD_FIELD_IDS.body },
       position: { universalIdentifier: LEAD_NOTE_STANDARD_FIELD_IDS.position },
       createdBy: { universalIdentifier: LEAD_NOTE_STANDARD_FIELD_IDS.createdBy },
@@ -2235,10 +2235,10 @@ export const STANDARD_OBJECTS = {
   leadDocument: {
     universalIdentifier: STANDARD_OBJECT_IDS.leadDocument,
     fields: {
-      id: { universalIdentifier: '20202020-ldoc-0000-0000-000000000000' },
-      createdAt: { universalIdentifier: '20202020-ldoc-0001-0001-000000000001' },
-      updatedAt: { universalIdentifier: '20202020-ldoc-0002-0002-000000000002' },
-      deletedAt: { universalIdentifier: '20202020-ldoc-0003-0003-000000000003' },
+      id: { universalIdentifier: '20202020-1d0c-0000-0000-000000000000' },
+      createdAt: { universalIdentifier: '20202020-1d0c-0001-0001-000000000001' },
+      updatedAt: { universalIdentifier: '20202020-1d0c-0002-0002-000000000002' },
+      deletedAt: { universalIdentifier: '20202020-1d0c-0003-0003-000000000003' },
       category: { universalIdentifier: LEAD_DOCUMENT_STANDARD_FIELD_IDS.category },
       fileUrl: { universalIdentifier: LEAD_DOCUMENT_STANDARD_FIELD_IDS.fileUrl },
       caption: { universalIdentifier: LEAD_DOCUMENT_STANDARD_FIELD_IDS.caption },
@@ -2252,10 +2252,10 @@ export const STANDARD_OBJECTS = {
   existingLoan: {
     universalIdentifier: STANDARD_OBJECT_IDS.existingLoan,
     fields: {
-      id: { universalIdentifier: '20202020-exln-0000-0000-000000000000' },
-      createdAt: { universalIdentifier: '20202020-exln-0001-0001-000000000001' },
-      updatedAt: { universalIdentifier: '20202020-exln-0002-0002-000000000002' },
-      deletedAt: { universalIdentifier: '20202020-exln-0003-0003-000000000003' },
+      id: { universalIdentifier: '20202020-e41a-0000-0000-000000000000' },
+      createdAt: { universalIdentifier: '20202020-e41a-0001-0001-000000000001' },
+      updatedAt: { universalIdentifier: '20202020-e41a-0002-0002-000000000002' },
+      deletedAt: { universalIdentifier: '20202020-e41a-0003-0003-000000000003' },
       financer: { universalIdentifier: EXISTING_LOAN_STANDARD_FIELD_IDS.financer },
       loanType: { universalIdentifier: EXISTING_LOAN_STANDARD_FIELD_IDS.loanType },
       tenureMonths: { universalIdentifier: EXISTING_LOAN_STANDARD_FIELD_IDS.tenureMonths },
@@ -2272,10 +2272,10 @@ export const STANDARD_OBJECTS = {
   vehicle: {
     universalIdentifier: STANDARD_OBJECT_IDS.vehicle,
     fields: {
-      id: { universalIdentifier: '20202020-vehi-0000-0000-000000000000' },
-      createdAt: { universalIdentifier: '20202020-vehi-0001-0001-000000000001' },
-      updatedAt: { universalIdentifier: '20202020-vehi-0002-0002-000000000002' },
-      deletedAt: { universalIdentifier: '20202020-vehi-0003-0003-000000000003' },
+      id: { universalIdentifier: '20202020-0e41-0000-0000-000000000000' },
+      createdAt: { universalIdentifier: '20202020-0e41-0001-0001-000000000001' },
+      updatedAt: { universalIdentifier: '20202020-0e41-0002-0002-000000000002' },
+      deletedAt: { universalIdentifier: '20202020-0e41-0003-0003-000000000003' },
       brand: { universalIdentifier: VEHICLE_STANDARD_FIELD_IDS.brand },
       model: { universalIdentifier: VEHICLE_STANDARD_FIELD_IDS.model },
       subModel: { universalIdentifier: VEHICLE_STANDARD_FIELD_IDS.subModel },
@@ -2291,10 +2291,10 @@ export const STANDARD_OBJECTS = {
   machinery: {
     universalIdentifier: STANDARD_OBJECT_IDS.machinery,
     fields: {
-      id: { universalIdentifier: '20202020-mach-0000-0000-000000000000' },
-      createdAt: { universalIdentifier: '20202020-mach-0001-0001-000000000001' },
-      updatedAt: { universalIdentifier: '20202020-mach-0002-0002-000000000002' },
-      deletedAt: { universalIdentifier: '20202020-mach-0003-0003-000000000003' },
+      id: { universalIdentifier: '20202020-aac4-0000-0000-000000000000' },
+      createdAt: { universalIdentifier: '20202020-aac4-0001-0001-000000000001' },
+      updatedAt: { universalIdentifier: '20202020-aac4-0002-0002-000000000002' },
+      deletedAt: { universalIdentifier: '20202020-aac4-0003-0003-000000000003' },
       brand: { universalIdentifier: MACHINERY_STANDARD_FIELD_IDS.brand },
       model: { universalIdentifier: MACHINERY_STANDARD_FIELD_IDS.model },
       purchaseValue: { universalIdentifier: MACHINERY_STANDARD_FIELD_IDS.purchaseValue },
@@ -2310,10 +2310,10 @@ export const STANDARD_OBJECTS = {
   reference: {
     universalIdentifier: STANDARD_OBJECT_IDS.reference,
     fields: {
-      id: { universalIdentifier: '20202020-refe-0000-0000-000000000000' },
-      createdAt: { universalIdentifier: '20202020-refe-0001-0001-000000000001' },
-      updatedAt: { universalIdentifier: '20202020-refe-0002-0002-000000000002' },
-      deletedAt: { universalIdentifier: '20202020-refe-0003-0003-000000000003' },
+      id: { universalIdentifier: '20202020-2efe-0000-0000-000000000000' },
+      createdAt: { universalIdentifier: '20202020-2efe-0001-0001-000000000001' },
+      updatedAt: { universalIdentifier: '20202020-2efe-0002-0002-000000000002' },
+      deletedAt: { universalIdentifier: '20202020-2efe-0003-0003-000000000003' },
       name: { universalIdentifier: REFERENCE_STANDARD_FIELD_IDS.name },
       firmName: { universalIdentifier: REFERENCE_STANDARD_FIELD_IDS.firmName },
       address: { universalIdentifier: REFERENCE_STANDARD_FIELD_IDS.address },
@@ -2329,10 +2329,10 @@ export const STANDARD_OBJECTS = {
   disbursement: {
     universalIdentifier: STANDARD_OBJECT_IDS.disbursement,
     fields: {
-      id: { universalIdentifier: '20202020-disb-0000-0000-000000000000' },
-      createdAt: { universalIdentifier: '20202020-disb-0001-0001-000000000001' },
-      updatedAt: { universalIdentifier: '20202020-disb-0002-0002-000000000002' },
-      deletedAt: { universalIdentifier: '20202020-disb-0003-0003-000000000003' },
+      id: { universalIdentifier: '20202020-d15b-0000-0000-000000000000' },
+      createdAt: { universalIdentifier: '20202020-d15b-0001-0001-000000000001' },
+      updatedAt: { universalIdentifier: '20202020-d15b-0002-0002-000000000002' },
+      deletedAt: { universalIdentifier: '20202020-d15b-0003-0003-000000000003' },
       financer: { universalIdentifier: DISBURSEMENT_STANDARD_FIELD_IDS.financer },
       loanType: { universalIdentifier: DISBURSEMENT_STANDARD_FIELD_IDS.loanType },
       accountNo: { universalIdentifier: DISBURSEMENT_STANDARD_FIELD_IDS.accountNo },
@@ -2359,10 +2359,10 @@ export const STANDARD_OBJECTS = {
   catalogProduct: {
     universalIdentifier: STANDARD_OBJECT_IDS.catalogProduct,
     fields: {
-      id: { universalIdentifier: '20202020-catp-0000-0000-000000000000' },
-      createdAt: { universalIdentifier: '20202020-catp-0001-0001-000000000001' },
-      updatedAt: { universalIdentifier: '20202020-catp-0002-0002-000000000002' },
-      deletedAt: { universalIdentifier: '20202020-catp-0003-0003-000000000003' },
+      id: { universalIdentifier: '20202020-ca72-0000-0000-000000000000' },
+      createdAt: { universalIdentifier: '20202020-ca72-0001-0001-000000000001' },
+      updatedAt: { universalIdentifier: '20202020-ca72-0002-0002-000000000002' },
+      deletedAt: { universalIdentifier: '20202020-ca72-0003-0003-000000000003' },
       name: { universalIdentifier: CATALOG_PRODUCT_STANDARD_FIELD_IDS.name },
       isActive: { universalIdentifier: CATALOG_PRODUCT_STANDARD_FIELD_IDS.isActive },
       position: { universalIdentifier: CATALOG_PRODUCT_STANDARD_FIELD_IDS.position },
@@ -2374,10 +2374,10 @@ export const STANDARD_OBJECTS = {
   catalogStatus: {
     universalIdentifier: STANDARD_OBJECT_IDS.catalogStatus,
     fields: {
-      id: { universalIdentifier: '20202020-cats-0000-0000-000000000000' },
-      createdAt: { universalIdentifier: '20202020-cats-0001-0001-000000000001' },
-      updatedAt: { universalIdentifier: '20202020-cats-0002-0002-000000000002' },
-      deletedAt: { universalIdentifier: '20202020-cats-0003-0003-000000000003' },
+      id: { universalIdentifier: '20202020-ca75-0000-0000-000000000000' },
+      createdAt: { universalIdentifier: '20202020-ca75-0001-0001-000000000001' },
+      updatedAt: { universalIdentifier: '20202020-ca75-0002-0002-000000000002' },
+      deletedAt: { universalIdentifier: '20202020-ca75-0003-0003-000000000003' },
       name: { universalIdentifier: CATALOG_STATUS_STANDARD_FIELD_IDS.name },
       isActive: { universalIdentifier: CATALOG_STATUS_STANDARD_FIELD_IDS.isActive },
       position: { universalIdentifier: CATALOG_STATUS_STANDARD_FIELD_IDS.position },
@@ -2389,10 +2389,10 @@ export const STANDARD_OBJECTS = {
   catalogFinancer: {
     universalIdentifier: STANDARD_OBJECT_IDS.catalogFinancer,
     fields: {
-      id: { universalIdentifier: '20202020-catf-0000-0000-000000000000' },
-      createdAt: { universalIdentifier: '20202020-catf-0001-0001-000000000001' },
-      updatedAt: { universalIdentifier: '20202020-catf-0002-0002-000000000002' },
-      deletedAt: { universalIdentifier: '20202020-catf-0003-0003-000000000003' },
+      id: { universalIdentifier: '20202020-ca7f-0000-0000-000000000000' },
+      createdAt: { universalIdentifier: '20202020-ca7f-0001-0001-000000000001' },
+      updatedAt: { universalIdentifier: '20202020-ca7f-0002-0002-000000000002' },
+      deletedAt: { universalIdentifier: '20202020-ca7f-0003-0003-000000000003' },
       name: { universalIdentifier: CATALOG_FINANCER_STANDARD_FIELD_IDS.name },
       isActive: { universalIdentifier: CATALOG_FINANCER_STANDARD_FIELD_IDS.isActive },
       position: { universalIdentifier: CATALOG_FINANCER_STANDARD_FIELD_IDS.position },
@@ -2404,10 +2404,10 @@ export const STANDARD_OBJECTS = {
   catalogLoanType: {
     universalIdentifier: STANDARD_OBJECT_IDS.catalogLoanType,
     fields: {
-      id: { universalIdentifier: '20202020-calt-0000-0000-000000000000' },
-      createdAt: { universalIdentifier: '20202020-calt-0001-0001-000000000001' },
-      updatedAt: { universalIdentifier: '20202020-calt-0002-0002-000000000002' },
-      deletedAt: { universalIdentifier: '20202020-calt-0003-0003-000000000003' },
+      id: { universalIdentifier: '20202020-ca17-0000-0000-000000000000' },
+      createdAt: { universalIdentifier: '20202020-ca17-0001-0001-000000000001' },
+      updatedAt: { universalIdentifier: '20202020-ca17-0002-0002-000000000002' },
+      deletedAt: { universalIdentifier: '20202020-ca17-0003-0003-000000000003' },
       name: { universalIdentifier: CATALOG_LOAN_TYPE_STANDARD_FIELD_IDS.name },
       isActive: { universalIdentifier: CATALOG_LOAN_TYPE_STANDARD_FIELD_IDS.isActive },
       position: { universalIdentifier: CATALOG_LOAN_TYPE_STANDARD_FIELD_IDS.position },
@@ -2419,10 +2419,10 @@ export const STANDARD_OBJECTS = {
   catalogPropertyType: {
     universalIdentifier: STANDARD_OBJECT_IDS.catalogPropertyType,
     fields: {
-      id: { universalIdentifier: '20202020-capt-0000-0000-000000000000' },
-      createdAt: { universalIdentifier: '20202020-capt-0001-0001-000000000001' },
-      updatedAt: { universalIdentifier: '20202020-capt-0002-0002-000000000002' },
-      deletedAt: { universalIdentifier: '20202020-capt-0003-0003-000000000003' },
+      id: { universalIdentifier: '20202020-ca27-0000-0000-000000000000' },
+      createdAt: { universalIdentifier: '20202020-ca27-0001-0001-000000000001' },
+      updatedAt: { universalIdentifier: '20202020-ca27-0002-0002-000000000002' },
+      deletedAt: { universalIdentifier: '20202020-ca27-0003-0003-000000000003' },
       name: { universalIdentifier: CATALOG_PROPERTY_TYPE_STANDARD_FIELD_IDS.name },
       isActive: { universalIdentifier: CATALOG_PROPERTY_TYPE_STANDARD_FIELD_IDS.isActive },
       position: { universalIdentifier: CATALOG_PROPERTY_TYPE_STANDARD_FIELD_IDS.position },
