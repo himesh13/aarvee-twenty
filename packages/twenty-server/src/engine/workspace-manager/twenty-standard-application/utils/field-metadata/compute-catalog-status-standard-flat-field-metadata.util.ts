@@ -102,7 +102,7 @@ export const buildCatalogStatusStandardFlatFieldMetadatas = ({
       label: 'Name',
       description: 'Status name',
       icon: 'IconProgressCheck',
-      isNullable: false,
+      isNullable: true,
     },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,

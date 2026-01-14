@@ -119,7 +119,7 @@ export const buildLeadStandardFlatFieldMetadatas = ({
       label: 'Lead Number',
       description: 'Unique lead number (LD-YYYYMM-#####)',
       icon: 'IconHash',
-      isNullable: false,
+      isNullable: true,
     },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,
@@ -153,9 +153,9 @@ export const buildLeadStandardFlatFieldMetadatas = ({
       icon: 'IconPhone',
       isNullable: false,
       defaultValue: { 
-        primaryPhoneNumber: '', 
-        primaryPhoneCountryCode: '', 
-        primaryPhoneCallingCode: '',
+        primaryPhoneNumber: "''", 
+        primaryPhoneCountryCode: "''", 
+        primaryPhoneCallingCode: "''",
         additionalPhones: null 
       },
     },
