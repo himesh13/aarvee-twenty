@@ -24,9 +24,10 @@ This script will:
 If you prefer manual setup:
 
 ```bash
-# 1. Set up environment
+# 1. Set up environment (from repository root)
 cd packages/twenty-server
 cp .env.example .env
+cd ../..
 
 # 2. Build the server
 npx nx build twenty-server

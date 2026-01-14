@@ -19,7 +19,7 @@ NC='\033[0m' # No Color
 
 # Function to print colored messages
 print_info() {
-    echo -e "${BLUE}ℹ ${NC} $1"
+    echo -e "${BLUE}ℹ${NC} $1"
 }
 
 print_success() {

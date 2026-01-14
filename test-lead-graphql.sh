@@ -49,9 +49,9 @@ INTROSPECT_RESULT=$(curl -s -X POST http://localhost:3000/graphql \
 if echo "$INTROSPECT_RESULT" | grep -q '"name":"Lead"'; then
     print_success "Lead type found in GraphQL schema"
     
-    # Count fields
-    FIELD_COUNT=$(echo "$INTROSPECT_RESULT" | grep -o '"name":"[^"]*"' | wc -l)
-    print_info "Lead type has $FIELD_COUNT fields"
+    # Count fields (approximate - includes nested type names)
+    FIELD_COUNT=$(echo "$INTROSPECT_RESULT" | grep -o '"name":"[^"]*"' | grep -v '"name":"Lead"' | wc -l)
+    print_info "Lead type and its related types have approximately $FIELD_COUNT named elements"
 else
     print_error "Lead type NOT found in GraphQL schema"
     print_info "You need to run the fix: ./fix-lead-graphql.sh"
