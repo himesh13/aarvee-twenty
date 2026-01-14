@@ -81,6 +81,7 @@ export const STANDARD_OBJECTS = {
       opportunity: {
         universalIdentifier: ATTACHMENT_STANDARD_FIELD_IDS.opportunity,
       },
+      lead: { universalIdentifier: ATTACHMENT_STANDARD_FIELD_IDS.lead },
       dashboard: {
         universalIdentifier: ATTACHMENT_STANDARD_FIELD_IDS.dashboard,
       },
@@ -642,6 +643,7 @@ export const STANDARD_OBJECTS = {
       },
       task: { universalIdentifier: FAVORITE_STANDARD_FIELD_IDS.task },
       note: { universalIdentifier: FAVORITE_STANDARD_FIELD_IDS.note },
+      lead: { universalIdentifier: FAVORITE_STANDARD_FIELD_IDS.lead },
       viewId: { universalIdentifier: FAVORITE_STANDARD_FIELD_IDS.view },
       favoriteFolder: {
         universalIdentifier: FAVORITE_STANDARD_FIELD_IDS.favoriteFolder,
@@ -1111,6 +1113,7 @@ export const STANDARD_OBJECTS = {
       opportunity: {
         universalIdentifier: NOTE_TARGET_STANDARD_FIELD_IDS.opportunity,
       },
+      lead: { universalIdentifier: NOTE_TARGET_STANDARD_FIELD_IDS.lead },
     },
     indexes: {
       noteIdIndex: {
@@ -1529,6 +1532,7 @@ export const STANDARD_OBJECTS = {
       opportunity: {
         universalIdentifier: TASK_TARGET_STANDARD_FIELD_IDS.opportunity,
       },
+      lead: { universalIdentifier: TASK_TARGET_STANDARD_FIELD_IDS.lead },
     },
     indexes: {
       taskIdIndex: {
@@ -1600,6 +1604,10 @@ export const STANDARD_OBJECTS = {
       targetDashboard: {
         universalIdentifier:
           TIMELINE_ACTIVITY_STANDARD_FIELD_IDS.targetDashboard,
+      },
+      targetLead: {
+        universalIdentifier:
+          TIMELINE_ACTIVITY_STANDARD_FIELD_IDS.targetLead,
       },
       linkedRecordCachedName: {
         universalIdentifier:

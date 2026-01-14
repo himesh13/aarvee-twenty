@@ -323,6 +323,487 @@ export const STANDARD_FLAT_OBJECT_METADATA_BUILDERS_BY_OBJECT_NAME = {
       twentyStandardApplicationId,
       now,
     }),
+  lead: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<CreateStandardObjectArgs<'lead'>, 'context' | 'objectName'>) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'lead',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier: STANDARD_OBJECTS.lead.universalIdentifier,
+        nameSingular: 'lead',
+        namePlural: 'leads',
+        labelSingular: 'Lead',
+        labelPlural: 'Leads',
+        description: 'A lead',
+        icon: 'IconTargetArrow',
+        isSearchable: true,
+        labelIdentifierFieldMetadataName: 'customerName',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
+  leadBusinessDetail: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<
+    CreateStandardObjectArgs<'leadBusinessDetail'>,
+    'context' | 'objectName'
+  >) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'leadBusinessDetail',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier:
+          STANDARD_OBJECTS.leadBusinessDetail.universalIdentifier,
+        nameSingular: 'leadBusinessDetail',
+        namePlural: 'leadBusinessDetails',
+        labelSingular: 'Lead Business Detail',
+        labelPlural: 'Lead Business Details',
+        description: 'Business details for a lead',
+        icon: 'IconBriefcase',
+        isSystem: true,
+        labelIdentifierFieldMetadataName: 'id',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
+  property: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<CreateStandardObjectArgs<'property'>, 'context' | 'objectName'>) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'property',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier: STANDARD_OBJECTS.property.universalIdentifier,
+        nameSingular: 'property',
+        namePlural: 'properties',
+        labelSingular: 'Property',
+        labelPlural: 'Properties',
+        description: 'A property',
+        icon: 'IconHome',
+        isSystem: true,
+        labelIdentifierFieldMetadataName: 'id',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
+  companyParty: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<
+    CreateStandardObjectArgs<'companyParty'>,
+    'context' | 'objectName'
+  >) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'companyParty',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier: STANDARD_OBJECTS.companyParty.universalIdentifier,
+        nameSingular: 'companyParty',
+        namePlural: 'companyParties',
+        labelSingular: 'Company Party',
+        labelPlural: 'Company Parties',
+        description: 'A company party',
+        icon: 'IconBuilding',
+        isSystem: true,
+        labelIdentifierFieldMetadataName: 'id',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
+  individualParty: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<
+    CreateStandardObjectArgs<'individualParty'>,
+    'context' | 'objectName'
+  >) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'individualParty',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier:
+          STANDARD_OBJECTS.individualParty.universalIdentifier,
+        nameSingular: 'individualParty',
+        namePlural: 'individualParties',
+        labelSingular: 'Individual Party',
+        labelPlural: 'Individual Parties',
+        description: 'An individual party',
+        icon: 'IconUser',
+        isSystem: true,
+        labelIdentifierFieldMetadataName: 'id',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
+  leadNote: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<CreateStandardObjectArgs<'leadNote'>, 'context' | 'objectName'>) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'leadNote',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier: STANDARD_OBJECTS.leadNote.universalIdentifier,
+        nameSingular: 'leadNote',
+        namePlural: 'leadNotes',
+        labelSingular: 'Lead Note',
+        labelPlural: 'Lead Notes',
+        description: 'A note for a lead',
+        icon: 'IconNotes',
+        isSystem: true,
+        labelIdentifierFieldMetadataName: 'id',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
+  leadDocument: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<
+    CreateStandardObjectArgs<'leadDocument'>,
+    'context' | 'objectName'
+  >) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'leadDocument',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier: STANDARD_OBJECTS.leadDocument.universalIdentifier,
+        nameSingular: 'leadDocument',
+        namePlural: 'leadDocuments',
+        labelSingular: 'Lead Document',
+        labelPlural: 'Lead Documents',
+        description: 'A document for a lead',
+        icon: 'IconFileText',
+        isSystem: true,
+        labelIdentifierFieldMetadataName: 'id',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
+  existingLoan: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<
+    CreateStandardObjectArgs<'existingLoan'>,
+    'context' | 'objectName'
+  >) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'existingLoan',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier: STANDARD_OBJECTS.existingLoan.universalIdentifier,
+        nameSingular: 'existingLoan',
+        namePlural: 'existingLoans',
+        labelSingular: 'Existing Loan',
+        labelPlural: 'Existing Loans',
+        description: 'An existing loan',
+        icon: 'IconCurrencyDollar',
+        isSystem: true,
+        labelIdentifierFieldMetadataName: 'id',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
+  vehicle: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<CreateStandardObjectArgs<'vehicle'>, 'context' | 'objectName'>) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'vehicle',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier: STANDARD_OBJECTS.vehicle.universalIdentifier,
+        nameSingular: 'vehicle',
+        namePlural: 'vehicles',
+        labelSingular: 'Vehicle',
+        labelPlural: 'Vehicles',
+        description: 'A vehicle',
+        icon: 'IconCar',
+        isSystem: true,
+        labelIdentifierFieldMetadataName: 'id',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
+  machinery: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<CreateStandardObjectArgs<'machinery'>, 'context' | 'objectName'>) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'machinery',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier: STANDARD_OBJECTS.machinery.universalIdentifier,
+        nameSingular: 'machinery',
+        namePlural: 'machineries',
+        labelSingular: 'Machinery',
+        labelPlural: 'Machineries',
+        description: 'A machinery',
+        icon: 'IconTool',
+        isSystem: true,
+        labelIdentifierFieldMetadataName: 'id',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
+  reference: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<CreateStandardObjectArgs<'reference'>, 'context' | 'objectName'>) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'reference',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier: STANDARD_OBJECTS.reference.universalIdentifier,
+        nameSingular: 'reference',
+        namePlural: 'references',
+        labelSingular: 'Reference',
+        labelPlural: 'References',
+        description: 'A reference',
+        icon: 'IconLink',
+        isSystem: true,
+        labelIdentifierFieldMetadataName: 'id',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
+  disbursement: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<
+    CreateStandardObjectArgs<'disbursement'>,
+    'context' | 'objectName'
+  >) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'disbursement',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier: STANDARD_OBJECTS.disbursement.universalIdentifier,
+        nameSingular: 'disbursement',
+        namePlural: 'disbursements',
+        labelSingular: 'Disbursement',
+        labelPlural: 'Disbursements',
+        description: 'A disbursement',
+        icon: 'IconCash',
+        isSystem: true,
+        labelIdentifierFieldMetadataName: 'id',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
+  catalogProduct: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<
+    CreateStandardObjectArgs<'catalogProduct'>,
+    'context' | 'objectName'
+  >) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'catalogProduct',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier:
+          STANDARD_OBJECTS.catalogProduct.universalIdentifier,
+        nameSingular: 'catalogProduct',
+        namePlural: 'catalogProducts',
+        labelSingular: 'Catalog Product',
+        labelPlural: 'Catalog Products',
+        description: 'A catalog product',
+        icon: 'IconTag',
+        isSystem: true,
+        labelIdentifierFieldMetadataName: 'name',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
+  catalogStatus: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<
+    CreateStandardObjectArgs<'catalogStatus'>,
+    'context' | 'objectName'
+  >) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'catalogStatus',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier: STANDARD_OBJECTS.catalogStatus.universalIdentifier,
+        nameSingular: 'catalogStatus',
+        namePlural: 'catalogStatuses',
+        labelSingular: 'Catalog Status',
+        labelPlural: 'Catalog Statuses',
+        description: 'A catalog status',
+        icon: 'IconCircleDot',
+        isSystem: true,
+        labelIdentifierFieldMetadataName: 'name',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
+  catalogFinancer: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<
+    CreateStandardObjectArgs<'catalogFinancer'>,
+    'context' | 'objectName'
+  >) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'catalogFinancer',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier:
+          STANDARD_OBJECTS.catalogFinancer.universalIdentifier,
+        nameSingular: 'catalogFinancer',
+        namePlural: 'catalogFinancers',
+        labelSingular: 'Catalog Financer',
+        labelPlural: 'Catalog Financers',
+        description: 'A catalog financer',
+        icon: 'IconBuildingBank',
+        isSystem: true,
+        labelIdentifierFieldMetadataName: 'name',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
+  catalogLoanType: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<
+    CreateStandardObjectArgs<'catalogLoanType'>,
+    'context' | 'objectName'
+  >) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'catalogLoanType',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier:
+          STANDARD_OBJECTS.catalogLoanType.universalIdentifier,
+        nameSingular: 'catalogLoanType',
+        namePlural: 'catalogLoanTypes',
+        labelSingular: 'Catalog Loan Type',
+        labelPlural: 'Catalog Loan Types',
+        description: 'A catalog loan type',
+        icon: 'IconList',
+        isSystem: true,
+        labelIdentifierFieldMetadataName: 'name',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
+  catalogPropertyType: ({
+    now,
+    workspaceId,
+    standardObjectMetadataRelatedEntityIds,
+    twentyStandardApplicationId,
+    dependencyFlatEntityMaps,
+  }: Omit<
+    CreateStandardObjectArgs<'catalogPropertyType'>,
+    'context' | 'objectName'
+  >) =>
+    createStandardObjectFlatMetadata({
+      objectName: 'catalogPropertyType',
+      dependencyFlatEntityMaps,
+      context: {
+        universalIdentifier:
+          STANDARD_OBJECTS.catalogPropertyType.universalIdentifier,
+        nameSingular: 'catalogPropertyType',
+        namePlural: 'catalogPropertyTypes',
+        labelSingular: 'Catalog Property Type',
+        labelPlural: 'Catalog Property Types',
+        description: 'A catalog property type',
+        icon: 'IconCategory',
+        isSystem: true,
+        labelIdentifierFieldMetadataName: 'name',
+      },
+      workspaceId,
+      standardObjectMetadataRelatedEntityIds,
+      twentyStandardApplicationId,
+      now,
+    }),
   messageChannelMessageAssociation: ({
     now,
     workspaceId,
