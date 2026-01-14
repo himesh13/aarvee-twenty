@@ -45,6 +45,7 @@ export const ATTACHMENT_STANDARD_FIELD_IDS = {
   opportunity: '20202020-7374-499d-bea3-9354890755b5',
   dashboard: '20202020-5324-43f3-9dbf-1a33e7de0ce6',
   workflow: '20202020-f1e8-4c9d-8a7b-3f5e1d2c9a8b',
+  lead: '20202020-att1-4001-8001-lead0000001',
   custom: '20202020-302d-43b3-9aea-aa4f89282a9f',
 } as const;
 
@@ -174,6 +175,7 @@ export const TIMELINE_ACTIVITY_STANDARD_FIELD_IDS = {
   targetWorkflowVersion: '20202020-74f1-4711-a129-e14ca0ecd744',
   targetWorkflowRun: '20202020-96f0-401b-9186-a3a0759225ac',
   targetDashboard: '20202020-7864-48f5-af7c-9e4b60140948',
+  targetLead: '20202020-tla1-4001-8001-targetlead01',
   targetCustom: '20202020-4a71-41b0-9f83-9cdcca3f8b14',
   linkedRecordCachedName: '20202020-cfdb-4bef-bbce-a29f41230934',
   linkedRecordId: '20202020-2e0e-48c0-b445-ee6c1e61687d',
@@ -192,6 +194,7 @@ export const FAVORITE_STANDARD_FIELD_IDS = {
   workflowRun: '20202020-db5a-4fe4-9a13-9afa22b1e762',
   task: '20202020-1b1b-4b3b-8b1b-7f8d6a1d7d5c',
   note: '20202020-1f25-43fe-8b00-af212fdde824',
+  lead: '20202020-fav1-4001-8001-lead0000001',
   view: '20202020-5a93-4fa9-acce-e73481a0bbdf',
   custom: '20202020-855a-4bc8-9861-79deef37011f',
   favoriteFolder: '20202020-f658-4d12-8b4d-248356aa4bd9',
@@ -295,6 +298,7 @@ export const NOTE_TARGET_STANDARD_FIELD_IDS = {
   person: '20202020-38ca-4aab-92f5-8a605ca2e4c5',
   company: 'c500fbc0-d6f2-4982-a959-5a755431696c',
   opportunity: '20202020-4e42-417a-a705-76581c9ade79',
+  lead: '20202020-nt01-4001-8001-lead0000001',
   custom: '20202020-3d12-4579-94ee-7117c1bad492',
 } as const;
 
@@ -369,6 +373,7 @@ export const TASK_TARGET_STANDARD_FIELD_IDS = {
   person: '20202020-c8a0-4e85-a016-87e2349cfbec',
   company: '20202020-4703-4a4e-948c-487b0c60a92c',
   opportunity: '20202020-6cb2-4c01-a9a5-aca3dbc11d41',
+  lead: '20202020-tt01-4001-8001-lead0000001',
   custom: '20202020-41c1-4c9a-8c75-be0971ef89af',
 } as const;
 
@@ -519,6 +524,7 @@ export const WORKSPACE_MEMBER_STANDARD_FIELD_IDS = {
   searchVector: '20202020-46d0-4e7f-bc26-74c0edaeb619',
   calendarStartDay: '20202020-92d0-1d7f-a126-25ededa6b142',
   numberFormat: '20202020-7f40-4e7f-b126-11c0eda6b141',
+  assignedLeads: '20202020-wm01-4001-8001-1a2b3c4d5e6f',
 } as const;
 export const CUSTOM_OBJECT_STANDARD_FIELD_IDS = {
   name: '20202020-ba07-4ffd-ba63-009491f5749c',
