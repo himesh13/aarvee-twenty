@@ -105,7 +105,7 @@ export const buildCatalogProductStandardFlatFieldMetadatas = ({
       label: 'Name',
       description: 'Product name',
       icon: 'IconPackage',
-      isNullable: false,
+      isNullable: true,
     },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,

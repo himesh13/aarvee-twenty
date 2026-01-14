@@ -104,7 +104,7 @@ export const buildReferenceStandardFlatFieldMetadatas = ({
       label: 'Name',
       description: 'Reference name',
       icon: 'IconUser',
-      isNullable: false,
+      isNullable: true,
     },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,

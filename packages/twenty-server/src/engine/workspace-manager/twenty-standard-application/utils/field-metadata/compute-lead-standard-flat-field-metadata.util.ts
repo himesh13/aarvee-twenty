@@ -119,7 +119,7 @@ export const buildLeadStandardFlatFieldMetadatas = ({
       label: 'Lead Number',
       description: 'Unique lead number (LD-YYYYMM-#####)',
       icon: 'IconHash',
-      isNullable: false,
+      isNullable: true,
     },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,

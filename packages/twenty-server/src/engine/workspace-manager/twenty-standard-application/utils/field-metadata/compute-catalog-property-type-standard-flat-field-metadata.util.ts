@@ -105,7 +105,7 @@ export const buildCatalogPropertyTypeStandardFlatFieldMetadatas = ({
       label: 'Name',
       description: 'Property type name',
       icon: 'IconHome',
-      isNullable: false,
+      isNullable: true,
     },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,

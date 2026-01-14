@@ -105,7 +105,7 @@ export const buildCatalogLoanTypeStandardFlatFieldMetadatas = ({
       label: 'Name',
       description: 'Loan type name',
       icon: 'IconCash',
-      isNullable: false,
+      isNullable: true,
     },
     standardObjectMetadataRelatedEntityIds,
     dependencyFlatEntityMaps,
