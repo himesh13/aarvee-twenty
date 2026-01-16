@@ -2,9 +2,9 @@ import { Args, Query, Resolver } from '@nestjs/graphql';
 import { UseGuards } from '@nestjs/common';
 import { Response } from 'express';
 
-import { Workspace } from 'src/engine/core-modules/workspace/workspace.entity';
+import { WorkspaceEntity } from 'src/engine/core-modules/workspace/workspace.entity';
 import { AuthWorkspace } from 'src/engine/decorators/auth/auth-workspace.decorator';
-import { JwtAuthGuard } from 'src/engine/guards/jwt.auth.guard';
+import { JwtAuthGuard } from 'src/engine/guards/jwt-auth.guard';
 import {
   ExportFormat,
   LeadExportService,
@@ -26,7 +26,7 @@ export class LeadExportResolver {
    */
   @Query(() => String)
   async exportLeadToPDF(
-    @AuthWorkspace() workspace: Workspace,
+    @AuthWorkspace() workspace: WorkspaceEntity,
     @Args('leadId', { type: () => String }) leadId: string,
     @Args('includeLetterhead', { type: () => Boolean, nullable: true })
     includeLetterhead?: boolean,
@@ -47,7 +47,7 @@ export class LeadExportResolver {
    */
   @Query(() => String)
   async exportLeadToWord(
-    @AuthWorkspace() workspace: Workspace,
+    @AuthWorkspace() workspace: WorkspaceEntity,
     @Args('leadId', { type: () => String }) leadId: string,
     @Args('includeLetterhead', { type: () => Boolean, nullable: true })
     includeLetterhead?: boolean,
@@ -68,7 +68,7 @@ export class LeadExportResolver {
    */
   @Query(() => String)
   async getLeadExportPreview(
-    @AuthWorkspace() workspace: Workspace,
+    @AuthWorkspace() workspace: WorkspaceEntity,
     @Args('leadId', { type: () => String }) leadId: string,
     @Args('includeLetterhead', { type: () => Boolean, nullable: true })
     includeLetterhead?: boolean,

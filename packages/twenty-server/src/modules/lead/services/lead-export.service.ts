@@ -254,12 +254,12 @@ export class LeadExportService {
       <span class="field-value">${lead.contactNumber || 'N/A'}</span>
     </div>
     <div class="field">
-      <span class="field-label">Loan Amount Required:</span>
-      <span class="field-value">₹${lead.loanAmountRequired?.toLocaleString() || 'N/A'}</span>
+      <span class="field-label">Loan Amount:</span>
+      <span class="field-value">₹${lead.loanAmount?.toLocaleString() || 'N/A'}</span>
     </div>
     <div class="field">
       <span class="field-label">Location:</span>
-      <span class="field-value">${lead.location || 'N/A'}</span>
+      <span class="field-value">${lead.locationText || 'N/A'}</span>
     </div>
   </div>
 `;

@@ -1,7 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
 
+import { GlobalWorkspaceOrmManager } from 'src/engine/twenty-orm/global-workspace-datasource/global-workspace-orm.manager';
 import { LeadWorkspaceEntity } from 'src/modules/lead/standard-objects/lead.workspace-entity';
 
 /**
@@ -23,8 +22,7 @@ export class LeadNumberGeneratorService {
   private static readonly SEQUENCE_LENGTH = 5;
 
   constructor(
-    @InjectRepository(LeadWorkspaceEntity, 'metadata')
-    private readonly leadRepository: Repository<LeadWorkspaceEntity>,
+    private readonly globalWorkspaceOrmManager: GlobalWorkspaceOrmManager,
   ) {}
 
   /**
@@ -113,7 +111,14 @@ export class LeadNumberGeneratorService {
     workspaceId: string,
     monthPrefix: string,
   ): Promise<number> {
-    const count = await this.leadRepository.count({
+    const leadRepository =
+      await this.globalWorkspaceOrmManager.getRepository<LeadWorkspaceEntity>(
+        workspaceId,
+        'lead',
+        { shouldBypassPermissionChecks: true },
+      );
+
+    const count = await leadRepository.count({
       where: {
         leadNo: {
           startsWith: monthPrefix,
@@ -135,7 +140,14 @@ export class LeadNumberGeneratorService {
     workspaceId: string,
     leadNo: string,
   ): Promise<boolean> {
-    const count = await this.leadRepository.count({
+    const leadRepository =
+      await this.globalWorkspaceOrmManager.getRepository<LeadWorkspaceEntity>(
+        workspaceId,
+        'lead',
+        { shouldBypassPermissionChecks: true },
+      );
+
+    const count = await leadRepository.count({
       where: {
         leadNo,
       },
