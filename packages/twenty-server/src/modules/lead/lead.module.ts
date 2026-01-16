@@ -6,8 +6,10 @@ import { TwentyORMModule } from 'src/engine/twenty-orm/twenty-orm.module';
 import { LeadResolver } from 'src/modules/lead/resolvers/lead.resolver';
 import { ComputedFieldsService } from 'src/modules/lead/services/computed-fields.service';
 import { LeadDuplicationService } from 'src/modules/lead/services/lead-duplication.service';
+import { LeadExportService } from 'src/modules/lead/services/lead-export.service';
 import { LeadNumberGeneratorService } from 'src/modules/lead/services/lead-number-generator.service';
 import { LeadValidationService } from 'src/modules/lead/services/lead-validation.service';
+import { ReminderService } from 'src/modules/lead/services/reminder.service';
 
 /**
  * Lead Module
@@ -24,6 +26,8 @@ import { LeadValidationService } from 'src/modules/lead/services/lead-validation
  * - LeadDuplicationService: Duplicates leads with new lead numbers
  * - LeadValidationService: Validates lead data and business rules
  * - ComputedFieldsService: Calculates computed/derived fields
+ * - ReminderService: Manages reminders (birthday, loan topup, custom)
+ * - LeadExportService: Exports leads to PDF/Word formats
  * - LeadResolver: Custom GraphQL mutations for lead operations
  */
 @Module({
@@ -33,6 +37,8 @@ import { LeadValidationService } from 'src/modules/lead/services/lead-validation
     LeadDuplicationService,
     LeadValidationService,
     ComputedFieldsService,
+    ReminderService,
+    LeadExportService,
     LeadResolver,
   ],
   exports: [
@@ -40,6 +46,8 @@ import { LeadValidationService } from 'src/modules/lead/services/lead-validation
     LeadDuplicationService,
     LeadValidationService,
     ComputedFieldsService,
+    ReminderService,
+    LeadExportService,
   ],
 })
 export class LeadModule {}
