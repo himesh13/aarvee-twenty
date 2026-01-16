@@ -52,24 +52,59 @@ export class ReminderService {
     daysAhead: number = 7,
   ): Promise<Reminder[]> {
     try {
-      // In a full implementation, this would query IndividualParty entities
-      // and check their dateOfBirth fields against current date
-      // For now, returning a structure that matches the expected format
-      
       this.logger.log(
         `Getting birthday reminders for workspace ${workspaceId}, ${daysAhead} days ahead`,
       );
 
-      // TODO: Implement actual database query
-      // const individualPartyRepository = await this.globalWorkspaceOrmManager.getRepository(
-      //   workspaceId,
-      //   'individualParty',
-      // );
+      const individualPartyRepository = await this.globalWorkspaceOrmManager.getRepository(
+        workspaceId,
+        'individualParty',
+      );
       
-      // Query for individuals with birthdays in the next N days
-      // Convert to Reminder format
+      // Get all individual parties with date of birth
+      const individuals = await individualPartyRepository.find({
+        where: {
+          dob: isDefined,
+        },
+        relations: ['lead'],
+      });
 
-      return [];
+      const now = new Date();
+      const reminders: Reminder[] = [];
+
+      // Check each individual for birthday in the next N days
+      for (const individual of individuals) {
+        if (!individual.dob) continue;
+
+        const birthday = new Date(individual.dob);
+        const thisYearBirthday = new Date(
+          now.getFullYear(),
+          birthday.getMonth(),
+          birthday.getDate(),
+        );
+
+        // Calculate days until birthday
+        const daysUntil = Math.ceil(
+          (thisYearBirthday.getTime() - now.getTime()) / (1000 * 60 * 60 * 24),
+        );
+
+        // If birthday is in the next N days
+        if (daysUntil >= 0 && daysUntil <= daysAhead) {
+          reminders.push({
+            id: `birthday-${individual.id}`,
+            type: ReminderType.BIRTHDAY,
+            leadId: individual.leadId || '',
+            title: `Birthday: ${individual.name}`,
+            description: `${individual.name}'s birthday is in ${daysUntil} day(s)`,
+            dueDate: thisYearBirthday,
+            isCompleted: false,
+            createdAt: now,
+          });
+        }
+      }
+
+      this.logger.log(`Found ${reminders.length} birthday reminders`);
+      return reminders;
     } catch (error) {
       this.logger.error(
         `Failed to get birthday reminders: ${error.message}`,
@@ -100,17 +135,46 @@ export class ReminderService {
       const thirteenMonthsAgo = new Date(now);
       thirteenMonthsAgo.setMonth(now.getMonth() - 13);
 
-      // TODO: Implement actual database query
-      // const disbursementRepository = await this.globalWorkspaceOrmManager.getRepository(
-      //   workspaceId,
-      //   'disbursement',
-      // );
+      const disbursementRepository = await this.globalWorkspaceOrmManager.getRepository(
+        workspaceId,
+        'disbursement',
+      );
       
       // Query for disbursements created 11-13 months ago
-      // Join with leads to get lead details
-      // Convert to Reminder format
+      const disbursements = await disbursementRepository.find({
+        where: {
+          createdAt: {
+            gte: thirteenMonthsAgo,
+            lte: elevenMonthsAgo,
+          },
+        },
+        relations: ['lead'],
+      });
 
-      return [];
+      const reminders: Reminder[] = [];
+
+      // Create reminders for each disbursement
+      for (const disbursement of disbursements) {
+        if (!disbursement.lead) continue;
+
+        const monthsSinceDisbursement = Math.floor(
+          (now.getTime() - disbursement.createdAt.getTime()) / (1000 * 60 * 60 * 24 * 30),
+        );
+
+        reminders.push({
+          id: `topup-${disbursement.id}`,
+          type: ReminderType.LOAN_TOPUP,
+          leadId: disbursement.leadId || '',
+          title: `Loan Topup Opportunity: ${disbursement.lead.customerName}`,
+          description: `Loan was disbursed ${monthsSinceDisbursement} months ago. Customer may be eligible for a topup.`,
+          dueDate: now,
+          isCompleted: false,
+          createdAt: now,
+        });
+      }
+
+      this.logger.log(`Found ${reminders.length} loan topup reminders`);
+      return reminders;
     } catch (error) {
       this.logger.error(
         `Failed to get loan topup reminders: ${error.message}`,

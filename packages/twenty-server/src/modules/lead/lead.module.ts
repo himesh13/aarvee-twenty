@@ -3,7 +3,9 @@ import { Module } from '@nestjs/common';
 import { ActorModule } from 'src/engine/core-modules/actor/actor.module';
 import { AuthModule } from 'src/engine/core-modules/auth/auth.module';
 import { TwentyORMModule } from 'src/engine/twenty-orm/twenty-orm.module';
+import { LeadExportResolver } from 'src/modules/lead/resolvers/lead-export.resolver';
 import { LeadResolver } from 'src/modules/lead/resolvers/lead.resolver';
+import { ReminderResolver } from 'src/modules/lead/resolvers/reminder.resolver';
 import { ComputedFieldsService } from 'src/modules/lead/services/computed-fields.service';
 import { LeadDuplicationService } from 'src/modules/lead/services/lead-duplication.service';
 import { LeadExportService } from 'src/modules/lead/services/lead-export.service';
@@ -28,7 +30,11 @@ import { ReminderService } from 'src/modules/lead/services/reminder.service';
  * - ComputedFieldsService: Calculates computed/derived fields
  * - ReminderService: Manages reminders (birthday, loan topup, custom)
  * - LeadExportService: Exports leads to PDF/Word formats
- * - LeadResolver: Custom GraphQL mutations for lead operations
+ * 
+ * GraphQL Resolvers:
+ * - LeadResolver: Custom mutations for lead operations (duplicate)
+ * - ReminderResolver: Reminder queries and mutations
+ * - LeadExportResolver: Export operations (PDF/Word)
  */
 @Module({
   imports: [ActorModule, AuthModule, TwentyORMModule],
@@ -40,6 +46,8 @@ import { ReminderService } from 'src/modules/lead/services/reminder.service';
     ReminderService,
     LeadExportService,
     LeadResolver,
+    ReminderResolver,
+    LeadExportResolver,
   ],
   exports: [
     LeadNumberGeneratorService,
