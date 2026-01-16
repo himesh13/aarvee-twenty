@@ -17,6 +17,6 @@ export class ExistingLoanWorkspaceEntity extends BaseWorkspaceEntity {
   updatedBy: ActorMetadata;
 
   // Relations
-  lead: EntityRelation<LeadWorkspaceEntity>;
-  leadId: string;
+  lead: EntityRelation<LeadWorkspaceEntity> | null;
+  leadId: string | null;
 }
