@@ -80,7 +80,7 @@ export class LeadDuplicationService {
             id: newLead.id,
             leadNo: newLead.leadNo,
             customerName: newLead.customerName,
-            contactNumber: newLead.contactNumber,
+            contactNumber: newLead.contactNumber?.primaryPhoneNumber || null,
             createdAt: newLead.createdAt,
             updatedAt: newLead.updatedAt,
           };
@@ -107,12 +107,14 @@ export class LeadDuplicationService {
       leadNo: newLeadNo,
       customerName: originalLead.customerName,
       contactNumber: originalLead.contactNumber,
-      productId: originalLead.productId,
-      loanAmountRequired: originalLead.loanAmountRequired,
-      location: originalLead.location,
-      leadReferredBy: originalLead.leadReferredBy,
+      product: originalLead.product,
+      loanAmount: originalLead.loanAmount,
+      locationText: originalLead.locationText,
+      locationLat: originalLead.locationLat,
+      locationLng: originalLead.locationLng,
+      referredBy: originalLead.referredBy,
       shortDescription: originalLead.shortDescription,
-      statusId: originalLead.statusId,
+      status: originalLead.status,
       // Don't copy assignedToId - let it be assigned manually
       // Don't copy dates or IDs
     };

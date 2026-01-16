@@ -10,8 +10,8 @@ export class DuplicatedLeadDTO {
   @Field(() => String)
   leadNo: string;
 
-  @Field(() => String)
-  customerName: string;
+  @Field(() => String, { nullable: true })
+  customerName: string | null;
 
   @Field(() => String, { nullable: true })
   contactNumber: string | null;
