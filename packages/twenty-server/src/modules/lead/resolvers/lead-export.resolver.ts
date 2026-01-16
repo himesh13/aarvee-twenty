@@ -4,7 +4,7 @@ import { Response } from 'express';
 
 import { Workspace } from 'src/engine/core-modules/workspace/workspace.entity';
 import { AuthWorkspace } from 'src/engine/decorators/auth/auth-workspace.decorator';
-import { JwtAuthGuard } from 'src/engine/guards/jwt.auth.guard';
+import { JwtAuthGuard } from 'src/engine/guards/jwt-auth.guard';
 import {
   ExportFormat,
   LeadExportService,

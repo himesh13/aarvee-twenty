@@ -8,7 +8,7 @@ import {
 import {
   ExceptionHandlerUser,
   handleExceptionAndConvertToGraphQLError,
-} from 'src/engine/core-modules/exception-handler/utils/handle-exception-and-convert-to-graphql-error.util';
+} from 'src/engine/utils/global-exception-handler.util';
 
 @Catch(LeadException)
 export class LeadGraphqlApiExceptionFilter implements GqlExceptionFilter {

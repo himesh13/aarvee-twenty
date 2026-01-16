@@ -1,4 +1,4 @@
-import { CustomException } from 'src/engine/core-modules/exception-handler/exceptions/custom.exception';
+import { CustomException } from 'src/utils/custom-exception';
 
 export enum LeadExceptionCode {
   LEAD_NOT_FOUND = 'LEAD_NOT_FOUND',
