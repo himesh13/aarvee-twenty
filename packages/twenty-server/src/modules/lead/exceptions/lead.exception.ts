@@ -1,3 +1,7 @@
+import { type MessageDescriptor } from '@lingui/core';
+import { msg } from '@lingui/core/macro';
+import { assertUnreachable } from 'twenty-shared/utils';
+
 import { CustomException } from 'src/utils/custom-exception';
 
 export enum LeadExceptionCode {
@@ -8,10 +12,35 @@ export enum LeadExceptionCode {
   INVALID_LEAD_DATA = 'INVALID_LEAD_DATA',
 }
 
-export class LeadException extends CustomException {
-  code: LeadExceptionCode;
-  constructor(message: string, code: LeadExceptionCode) {
-    super(message, code);
+const getLeadExceptionUserFriendlyMessage = (
+  code: LeadExceptionCode,
+) => {
+  switch (code) {
+    case LeadExceptionCode.LEAD_NOT_FOUND:
+      return msg`Lead not found.`;
+    case LeadExceptionCode.LEAD_DUPLICATION_FAILED:
+      return msg`Failed to duplicate lead.`;
+    case LeadExceptionCode.LEAD_RESTORE_FAILED:
+      return msg`Failed to restore lead.`;
+    case LeadExceptionCode.LEAD_NUMBER_GENERATION_FAILED:
+      return msg`Failed to generate lead number.`;
+    case LeadExceptionCode.INVALID_LEAD_DATA:
+      return msg`Invalid lead data.`;
+    default:
+      assertUnreachable(code);
+  }
+};
+
+export class LeadException extends CustomException<LeadExceptionCode> {
+  constructor(
+    message: string,
+    code: LeadExceptionCode,
+    { userFriendlyMessage }: { userFriendlyMessage?: MessageDescriptor } = {},
+  ) {
+    super(message, code, {
+      userFriendlyMessage:
+        userFriendlyMessage ?? getLeadExceptionUserFriendlyMessage(code),
+    });
   }
 }
 

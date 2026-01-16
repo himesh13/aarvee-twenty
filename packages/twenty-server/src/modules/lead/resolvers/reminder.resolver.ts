@@ -1,7 +1,7 @@
 import { Args, Query, Mutation, Resolver } from '@nestjs/graphql';
 import { UseGuards } from '@nestjs/common';
 
-import { Workspace } from 'src/engine/core-modules/workspace/workspace.entity';
+import { WorkspaceEntity } from 'src/engine/core-modules/workspace/workspace.entity';
 import { AuthWorkspace } from 'src/engine/decorators/auth/auth-workspace.decorator';
 import { JwtAuthGuard } from 'src/engine/guards/jwt-auth.guard';
 import {
@@ -25,7 +25,7 @@ export class ReminderResolver {
    */
   @Query(() => [Object])
   async getUpcomingBirthdayReminders(
-    @AuthWorkspace() workspace: Workspace,
+    @AuthWorkspace() workspace: WorkspaceEntity,
     @Args('daysAhead', { type: () => Number, nullable: true })
     daysAhead?: number,
   ): Promise<Reminder[]> {
@@ -40,7 +40,7 @@ export class ReminderResolver {
    */
   @Query(() => [Object])
   async getLoanTopupReminders(
-    @AuthWorkspace() workspace: Workspace,
+    @AuthWorkspace() workspace: WorkspaceEntity,
   ): Promise<Reminder[]> {
     return this.reminderService.getLoanTopupReminders(workspace.id);
   }
@@ -50,7 +50,7 @@ export class ReminderResolver {
    */
   @Query(() => [Object])
   async getRemindersForLead(
-    @AuthWorkspace() workspace: Workspace,
+    @AuthWorkspace() workspace: WorkspaceEntity,
     @Args('leadId', { type: () => String }) leadId: string,
   ): Promise<Reminder[]> {
     return this.reminderService.getRemindersForLead(workspace.id, leadId);
@@ -61,7 +61,7 @@ export class ReminderResolver {
    */
   @Mutation(() => Object)
   async createReminder(
-    @AuthWorkspace() workspace: Workspace,
+    @AuthWorkspace() workspace: WorkspaceEntity,
     @Args('leadId', { type: () => String }) leadId: string,
     @Args('title', { type: () => String }) title: string,
     @Args('dueDate', { type: () => Date }) dueDate: Date,
@@ -82,7 +82,7 @@ export class ReminderResolver {
    */
   @Mutation(() => Object)
   async completeReminder(
-    @AuthWorkspace() workspace: Workspace,
+    @AuthWorkspace() workspace: WorkspaceEntity,
     @Args('reminderId', { type: () => String }) reminderId: string,
   ): Promise<Reminder> {
     return this.reminderService.completeReminder(workspace.id, reminderId);
