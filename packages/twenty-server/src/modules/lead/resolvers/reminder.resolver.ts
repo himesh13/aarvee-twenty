@@ -9,6 +9,7 @@ import {
   ReminderService,
   ReminderType,
 } from 'src/modules/lead/services/reminder.service';
+import { ReminderDTO } from 'src/modules/lead/dtos/reminder.dto';
 
 /**
  * Reminder Resolver
@@ -23,7 +24,7 @@ export class ReminderResolver {
   /**
    * Get upcoming birthday reminders
    */
-  @Query(() => [Object])
+  @Query(() => [ReminderDTO])
   async getUpcomingBirthdayReminders(
     @AuthWorkspace() workspace: WorkspaceEntity,
     @Args('daysAhead', { type: () => Number, nullable: true })
@@ -38,7 +39,7 @@ export class ReminderResolver {
   /**
    * Get loan topup reminders
    */
-  @Query(() => [Object])
+  @Query(() => [ReminderDTO])
   async getLoanTopupReminders(
     @AuthWorkspace() workspace: WorkspaceEntity,
   ): Promise<Reminder[]> {
@@ -48,7 +49,7 @@ export class ReminderResolver {
   /**
    * Get all reminders for a lead
    */
-  @Query(() => [Object])
+  @Query(() => [ReminderDTO])
   async getRemindersForLead(
     @AuthWorkspace() workspace: WorkspaceEntity,
     @Args('leadId', { type: () => String }) leadId: string,
@@ -59,7 +60,7 @@ export class ReminderResolver {
   /**
    * Create a custom reminder
    */
-  @Mutation(() => Object)
+  @Mutation(() => ReminderDTO)
   async createReminder(
     @AuthWorkspace() workspace: WorkspaceEntity,
     @Args('leadId', { type: () => String }) leadId: string,
@@ -80,7 +81,7 @@ export class ReminderResolver {
   /**
    * Mark a reminder as completed
    */
-  @Mutation(() => Object)
+  @Mutation(() => ReminderDTO)
   async completeReminder(
     @AuthWorkspace() workspace: WorkspaceEntity,
     @Args('reminderId', { type: () => String }) reminderId: string,
