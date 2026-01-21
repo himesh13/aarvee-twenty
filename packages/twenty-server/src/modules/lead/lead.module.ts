@@ -3,6 +3,7 @@ import { Module } from '@nestjs/common';
 import { ActorModule } from 'src/engine/core-modules/actor/actor.module';
 import { AuthModule } from 'src/engine/core-modules/auth/auth.module';
 import { TwentyORMModule } from 'src/engine/twenty-orm/twenty-orm.module';
+import { WorkspaceCacheStorageModule } from 'src/engine/workspace-cache-storage/workspace-cache-storage.module';
 import { LeadExportResolver } from 'src/modules/lead/resolvers/lead-export.resolver';
 import { LeadResolver } from 'src/modules/lead/resolvers/lead.resolver';
 import { ReminderResolver } from 'src/modules/lead/resolvers/reminder.resolver';
@@ -37,7 +38,12 @@ import { ReminderService } from 'src/modules/lead/services/reminder.service';
  * - LeadExportResolver: Export operations (PDF/Word)
  */
 @Module({
-  imports: [ActorModule, AuthModule, TwentyORMModule],
+  imports: [
+    ActorModule,
+    AuthModule,
+    TwentyORMModule,
+    WorkspaceCacheStorageModule,
+  ],
   providers: [
     LeadNumberGeneratorService,
     LeadDuplicationService,
