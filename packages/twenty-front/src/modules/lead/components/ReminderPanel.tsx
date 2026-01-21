@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { useQuery, useMutation } from '@apollo/client';
 import { gql } from '@apollo/client';
 import styled from '@emotion/styled';
+import { Button } from 'twenty-ui/input';
 import { IconCheck, IconClock, IconPlus } from 'twenty-ui';
 
-import { Button } from '@/ui/input/button/components/Button';
 import { useSnackBar } from '@/ui/feedback/snack-bar-manager/hooks/useSnackBar';
 
 const GET_REMINDERS_QUERY = gql`

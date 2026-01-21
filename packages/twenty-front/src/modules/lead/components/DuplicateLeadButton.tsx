@@ -1,8 +1,8 @@
 import { useMutation } from '@apollo/client';
 import { gql } from '@apollo/client';
+import { Button } from 'twenty-ui/input';
 import { IconCopy } from 'twenty-ui';
 
-import { Button } from '@/ui/input/button/components/Button';
 import { useSnackBar } from '@/ui/feedback/snack-bar-manager/hooks/useSnackBar';
 
 const DUPLICATE_LEAD_MUTATION = gql`
