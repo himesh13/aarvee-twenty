@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import styled from '@emotion/styled';
 
-import { FieldTextInput } from '@/object-record/record-field/meta-types/input/components/FieldTextInput';
+import { TextInput } from '@/ui/field/input/components/TextInput';
 
 const Container = styled.div`
   display: flex;
@@ -85,7 +85,7 @@ export const ExistingLoanDetails = ({
       <Row>
         <FieldWrapper>
           <Label>Tenure (Months) *</Label>
-          <FieldTextInput
+          <TextInput
             value={tenure?.toString() || ''}
             onChange={(value) => {
               const numValue = parseInt(value, 10);
@@ -100,7 +100,7 @@ export const ExistingLoanDetails = ({
 
         <FieldWrapper>
           <Label>Paid EMI (Months) *</Label>
-          <FieldTextInput
+          <TextInput
             value={paidEmi?.toString() || ''}
             onChange={(value) => {
               const numValue = parseInt(value, 10);
@@ -122,7 +122,7 @@ export const ExistingLoanDetails = ({
       <Row>
         <FieldWrapper>
           <Label>EMI Amount (₹)</Label>
-          <FieldTextInput
+          <TextInput
             value={emiAmount?.toString() || ''}
             onChange={(value) => {
               const numValue = parseFloat(value);

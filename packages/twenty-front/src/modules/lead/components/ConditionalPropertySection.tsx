@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 
-import { RecordDetailRelationSection } from '@/object-record/record-show/components/RecordDetailRelationSection';
+import { RecordDetailRelationSection } from '@/object-record/record-field-list/record-detail-section/relation/components/RecordDetailRelationSection';
 
 const Container = styled.div`
   display: flex;

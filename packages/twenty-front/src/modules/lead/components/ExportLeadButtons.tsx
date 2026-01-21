@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { useQuery } from '@apollo/client';
 import { gql } from '@apollo/client';
 import styled from '@emotion/styled';
+import { Button } from 'twenty-ui/input';
 import { IconFileTypePdf, IconFileTypeDocx, IconDownload } from 'twenty-ui';
 
-import { Button } from '@/ui/input/button/components/Button';
 import { useSnackBar } from '@/ui/feedback/snack-bar-manager/hooks/useSnackBar';
 
 const EXPORT_TO_PDF_QUERY = gql`

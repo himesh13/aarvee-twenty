@@ -7,8 +7,8 @@
 
 import { useState } from 'react';
 import styled from '@emotion/styled';
-import { ExistingLoanDetails } from '@/modules/lead';
-import { Button } from '@/ui/input/button/components/Button';
+import { ExistingLoanDetails } from '@/lead';
+import { Button } from 'twenty-ui/input';
 import { useSnackBar } from '@/ui/feedback/snack-bar-manager/hooks/useSnackBar';
 
 const Container = styled.div`

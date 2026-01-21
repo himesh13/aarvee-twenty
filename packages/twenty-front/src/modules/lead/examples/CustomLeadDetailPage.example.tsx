@@ -24,10 +24,10 @@ import {
   ConditionalVehicleSection,
   ConditionalMachinerySection,
   useAutoSave,
-} from '@/modules/lead';
+} from '@/lead';
 
 // Import Twenty UI components
-import { Button } from '@/ui/input/button/components/Button';
+import { Button } from 'twenty-ui/input';
 import { useSnackBar } from '@/ui/feedback/snack-bar-manager/hooks/useSnackBar';
 
 const GET_LEAD_QUERY = gql`
