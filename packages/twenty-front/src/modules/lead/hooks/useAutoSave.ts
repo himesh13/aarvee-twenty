@@ -14,7 +14,7 @@ const UPDATE_LEAD_MUTATION = gql`
   }
 `;
 
-interface UseAutoSaveOptions {
+export interface UseAutoSaveOptions {
   leadId: string;
   formData: any;
   enabled?: boolean;
