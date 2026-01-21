@@ -13,6 +13,7 @@ const ORDERED_STANDARD_OBJECTS: string[] = [
   CoreObjectNameSingular.Person,
   CoreObjectNameSingular.Company,
   CoreObjectNameSingular.Opportunity,
+  CoreObjectNameSingular.Lead,
   CoreObjectNameSingular.Task,
   CoreObjectNameSingular.Note,
 ];
