@@ -13,6 +13,7 @@ export enum CoreObjectNameSingular {
   TimelineActivity = 'timelineActivity',
   Favorite = 'favorite',
   FavoriteFolder = 'favoriteFolder',
+  Lead = 'lead',
   Message = 'message',
   MessageChannel = 'messageChannel',
   MessageParticipant = 'messageParticipant',
