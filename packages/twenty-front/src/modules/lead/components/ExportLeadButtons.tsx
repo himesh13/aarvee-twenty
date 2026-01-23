@@ -3,7 +3,7 @@ import { useQuery } from '@apollo/client';
 import { gql } from '@apollo/client';
 import styled from '@emotion/styled';
 import { Button } from 'twenty-ui/input';
-import { IconFileTypePdf, IconFileTypeDocx, IconDownload } from 'twenty-ui';
+import { IconFileTypePdf, IconFileTypeDocx, IconDownload } from 'twenty-ui/display';
 
 import { useSnackBar } from '@/ui/feedback/snack-bar-manager/hooks/useSnackBar';
 
@@ -57,7 +57,7 @@ interface ExportLeadButtonsProps {
  * - Toggle letterhead inclusion
  */
 export const ExportLeadButtons = ({ leadId, leadNo }: ExportLeadButtonsProps) => {
-  const { enqueueSnackBar } = useSnackBar();
+  const { enqueueSuccessSnackBar, enqueueErrorSnackBar } = useSnackBar();
   const [includeLetterhead, setIncludeLetterhead] = useState(true);
 
   const downloadFile = (base64Data: string, filename: string, mimeType: string) => {
@@ -81,12 +81,13 @@ export const ExportLeadButtons = ({ leadId, leadNo }: ExportLeadButtonsProps) =>
       document.body.removeChild(link);
       window.URL.revokeObjectURL(url);
 
-      enqueueSnackBar(`${filename} downloaded successfully`, {
-        variant: 'success',
+      enqueueSuccessSnackBar({
+        message: `${filename} downloaded successfully`,
       });
     } catch (error) {
-      enqueueSnackBar(`Failed to download file: ${error.message}`, {
-        variant: 'error',
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred';
+      enqueueErrorSnackBar({
+        message: `Failed to download file: ${errorMessage}`,
       });
     }
   };

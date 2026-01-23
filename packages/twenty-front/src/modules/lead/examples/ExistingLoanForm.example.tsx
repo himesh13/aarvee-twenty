@@ -68,7 +68,7 @@ interface ExistingLoanData {
  * - Save functionality
  */
 export const ExistingLoanFormExample = () => {
-  const { enqueueSnackBar } = useSnackBar();
+  const { enqueueSuccessSnackBar, enqueueErrorSnackBar } = useSnackBar();
   
   const [loanData, setLoanData] = useState<ExistingLoanData>({
     loanType: 'Home Loan',

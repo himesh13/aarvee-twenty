@@ -50,7 +50,7 @@ export const useAutoSave = ({
   onSaveSuccess,
   onSaveError,
 }: UseAutoSaveOptions) => {
-  const { enqueueSnackBar } = useSnackBar();
+  const { enqueueErrorSnackBar } = useSnackBar();
   const lastSavedRef = useRef<Date | null>(null);
   
   const [updateLead, { loading: isSaving }] = useMutation(UPDATE_LEAD_MUTATION, {
@@ -61,8 +61,8 @@ export const useAutoSave = ({
       }
     },
     onError: (error) => {
-      enqueueSnackBar(`Auto-save failed: ${error.message}`, {
-        variant: 'error',
+      enqueueErrorSnackBar({
+        message: `Auto-save failed: ${error.message}`,
       });
       if (onSaveError) {
         onSaveError(error);

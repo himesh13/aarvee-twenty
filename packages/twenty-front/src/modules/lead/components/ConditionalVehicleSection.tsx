@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 
-import { RecordDetailRelationSection } from '@/object-record/record-field-list/record-detail-section/relation/components/RecordDetailRelationSection';
-
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -15,6 +13,13 @@ const InfoBox = styled.div`
   border-radius: ${({ theme }) => theme.border.radius.sm};
   font-size: ${({ theme }) => theme.font.size.sm};
   color: ${({ theme }) => theme.font.color.secondary};
+`;
+
+const Title = styled.h3`
+  font-size: ${({ theme }) => theme.font.size.md};
+  font-weight: ${({ theme }) => theme.font.weight.semiBold};
+  color: ${({ theme }) => theme.font.color.primary};
+  margin: 0 0 ${({ theme }) => theme.spacing(2)} 0;
 `;
 
 interface ConditionalVehicleSectionProps {
@@ -31,9 +36,12 @@ interface ConditionalVehicleSectionProps {
  * 
  * Features:
  * - Conditional rendering based on product type
- * - Integration with Twenty's relation section
  * - Info message when vehicles not applicable
  * - Support for: Brand, Model, Sub Model, MFG Year, Insurance Validity
+ * 
+ * Note: This component is a placeholder. To properly display vehicle relations,
+ * integrate with Twenty's RecordFieldList component which provides the necessary
+ * FieldContext and metadata for relation fields.
  */
 export const ConditionalVehicleSection = ({
   leadId,
@@ -82,11 +90,12 @@ export const ConditionalVehicleSection = ({
 
   return (
     <Container>
-      <RecordDetailRelationSection
-        relationName="vehicles"
-        relatedObjectNameSingular="vehicle"
-        relatedObjectNamePlural="vehicles"
-      />
+      <Title>Vehicle Details</Title>
+      <InfoBox>
+        This section will display vehicle relations. To use this section in production,
+        ensure that the vehicle relation field is properly configured in your object metadata
+        and use Twenty's RecordFieldList component with the appropriate FieldContext.
+      </InfoBox>
     </Container>
   );
 };

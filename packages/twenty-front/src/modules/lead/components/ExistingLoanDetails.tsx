@@ -94,7 +94,7 @@ export const ExistingLoanDetails = ({
               }
             }}
             placeholder="e.g., 240"
-            readonly={readonly}
+            readOnly={readonly}
           />
         </FieldWrapper>
 
@@ -109,7 +109,7 @@ export const ExistingLoanDetails = ({
               }
             }}
             placeholder="e.g., 48"
-            readonly={readonly}
+            readOnly={readonly}
           />
           {!isValidPaidEmi && (
             <div style={{ color: 'red', fontSize: '12px', marginTop: '4px' }}>
@@ -131,7 +131,7 @@ export const ExistingLoanDetails = ({
               }
             }}
             placeholder="e.g., 25000"
-            readonly={readonly}
+            readOnly={readonly}
           />
         </FieldWrapper>
 
