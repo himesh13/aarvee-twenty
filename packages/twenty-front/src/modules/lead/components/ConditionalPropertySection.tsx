@@ -1,5 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import styled from '@emotion/styled';
+
+import { useObjectMetadataItem } from '@/object-metadata/hooks/useObjectMetadataItem';
+import { RecordFieldList } from '@/object-record/record-field-list/components/RecordFieldList';
+import { RecordFieldsScopeContextProvider } from '@/object-record/record-field-list/contexts/RecordFieldsScopeContext';
 
 const Container = styled.div`
   display: flex;
@@ -13,13 +17,6 @@ const InfoBox = styled.div`
   border-radius: ${({ theme }) => theme.border.radius.sm};
   font-size: ${({ theme }) => theme.font.size.sm};
   color: ${({ theme }) => theme.font.color.secondary};
-`;
-
-const Title = styled.h3`
-  font-size: ${({ theme }) => theme.font.size.md};
-  font-weight: ${({ theme }) => theme.font.weight.semiBold};
-  color: ${({ theme }) => theme.font.color.primary};
-  margin: 0 0 ${({ theme }) => theme.spacing(2)} 0;
 `;
 
 interface ConditionalPropertySectionProps {
@@ -42,11 +39,8 @@ interface ConditionalPropertySectionProps {
  * 
  * Features:
  * - Conditional rendering based on product type
+ * - Integration with Twenty's RecordFieldList component
  * - Info message when properties not applicable
- * 
- * Note: This component is a placeholder. To properly display property relations,
- * integrate with Twenty's RecordFieldList component which provides the necessary
- * FieldContext and metadata for relation fields.
  */
 export const ConditionalPropertySection = ({
   leadId,
@@ -54,6 +48,10 @@ export const ConditionalPropertySection = ({
   isVisible,
 }: ConditionalPropertySectionProps) => {
   const [shouldShowProperties, setShouldShowProperties] = useState(false);
+  
+  const { objectMetadataItem } = useObjectMetadataItem({
+    objectNameSingular: 'lead',
+  });
 
   // Product types that require property details
   const propertyBasedProducts = [
@@ -85,6 +83,20 @@ export const ConditionalPropertySection = ({
   // Allow manual override via prop
   const showSection = isVisible !== undefined ? isVisible : shouldShowProperties;
 
+  // Get field IDs to exclude (all relation fields except property)
+  const excludeFieldMetadataIds = useMemo(() => {
+    if (!objectMetadataItem) return [];
+    
+    return objectMetadataItem.fields
+      .filter((field) => {
+        // Keep only relation fields that are NOT property-related
+        const isPropertyField = field.name === 'properties' || 
+                                 field.name === 'property';
+        return field.type === 'RELATION' && !isPropertyField;
+      })
+      .map((field) => field.id);
+  }, [objectMetadataItem]);
+
   if (!showSection) {
     return (
       <Container>
@@ -97,14 +109,21 @@ export const ConditionalPropertySection = ({
     );
   }
 
+  const instanceId = `conditional-property-${leadId}`;
+
   return (
     <Container>
-      <Title>Property Details</Title>
-      <InfoBox>
-        This section will display property relations. To use this section in production,
-        ensure that the property relation field is properly configured in your object metadata
-        and use Twenty's RecordFieldList component with the appropriate FieldContext.
-      </InfoBox>
+      <RecordFieldsScopeContextProvider value={{ scopeInstanceId: instanceId }}>
+        <RecordFieldList
+          instanceId={instanceId}
+          objectNameSingular="lead"
+          objectRecordId={leadId}
+          showDuplicatesSection={false}
+          showRelationSections={true}
+          excludeFieldMetadataIds={excludeFieldMetadataIds}
+          excludeCreatedAtAndUpdatedAt={true}
+        />
+      </RecordFieldsScopeContextProvider>
     </Container>
   );
 };
