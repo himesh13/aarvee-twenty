@@ -1,7 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import styled from '@emotion/styled';
 
-import { RecordDetailRelationSection } from '@/object-record/record-field-list/record-detail-section/relation/components/RecordDetailRelationSection';
+import { useObjectMetadataItem } from '@/object-metadata/hooks/useObjectMetadataItem';
+import { RecordFieldList } from '@/object-record/record-field-list/components/RecordFieldList';
+import { RecordFieldsScopeContextProvider } from '@/object-record/record-field-list/contexts/RecordFieldsScopeContext';
 
 const Container = styled.div`
   display: flex;
@@ -37,7 +39,7 @@ interface ConditionalPropertySectionProps {
  * 
  * Features:
  * - Conditional rendering based on product type
- * - Integration with Twenty's relation section
+ * - Integration with Twenty's RecordFieldList component
  * - Info message when properties not applicable
  */
 export const ConditionalPropertySection = ({
@@ -46,6 +48,10 @@ export const ConditionalPropertySection = ({
   isVisible,
 }: ConditionalPropertySectionProps) => {
   const [shouldShowProperties, setShouldShowProperties] = useState(false);
+  
+  const { objectMetadataItem } = useObjectMetadataItem({
+    objectNameSingular: 'lead',
+  });
 
   // Product types that require property details
   const propertyBasedProducts = [
@@ -77,6 +83,20 @@ export const ConditionalPropertySection = ({
   // Allow manual override via prop
   const showSection = isVisible !== undefined ? isVisible : shouldShowProperties;
 
+  // Get field IDs to exclude (all relation fields except property)
+  const excludeFieldMetadataIds = useMemo(() => {
+    if (!objectMetadataItem) return [];
+    
+    return objectMetadataItem.fields
+      .filter((field) => {
+        // Keep only relation fields that are NOT property-related
+        const isPropertyField = field.name === 'properties' || 
+                                 field.name === 'property';
+        return field.type === 'RELATION' && !isPropertyField;
+      })
+      .map((field) => field.id);
+  }, [objectMetadataItem]);
+
   if (!showSection) {
     return (
       <Container>
@@ -89,13 +109,21 @@ export const ConditionalPropertySection = ({
     );
   }
 
+  const instanceId = `conditional-property-${leadId}`;
+
   return (
     <Container>
-      <RecordDetailRelationSection
-        relationName="properties"
-        relatedObjectNameSingular="property"
-        relatedObjectNamePlural="properties"
-      />
+      <RecordFieldsScopeContextProvider value={{ scopeInstanceId: instanceId }}>
+        <RecordFieldList
+          instanceId={instanceId}
+          objectNameSingular="lead"
+          objectRecordId={leadId}
+          showDuplicatesSection={false}
+          showRelationSections={true}
+          excludeFieldMetadataIds={excludeFieldMetadataIds}
+          excludeCreatedAtAndUpdatedAt={true}
+        />
+      </RecordFieldsScopeContextProvider>
     </Container>
   );
 };

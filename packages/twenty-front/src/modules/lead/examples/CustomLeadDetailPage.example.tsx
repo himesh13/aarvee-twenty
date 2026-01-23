@@ -147,7 +147,7 @@ const AutoSaveIndicator = styled.div<{ isSaving: boolean }>`
 export const CustomLeadDetailPageExample = () => {
   const { leadId } = useParams<{ leadId: string }>();
   const navigate = useNavigate();
-  const { enqueueSnackBar } = useSnackBar();
+  const { enqueueSuccessSnackBar, enqueueErrorSnackBar } = useSnackBar();
   
   const [formData, setFormData] = useState<any>(null);
 

@@ -1,7 +1,7 @@
 import { useMutation } from '@apollo/client';
 import { gql } from '@apollo/client';
 import { Button } from 'twenty-ui/input';
-import { IconCopy } from 'twenty-ui';
+import { IconCopy } from 'twenty-ui/display';
 
 import { useSnackBar } from '@/ui/feedback/snack-bar-manager/hooks/useSnackBar';
 
@@ -31,17 +31,14 @@ export const DuplicateLeadButton = ({
   leadId,
   onSuccess,
 }: DuplicateLeadButtonProps) => {
-  const { enqueueSnackBar } = useSnackBar();
+  const { enqueueSuccessSnackBar, enqueueErrorSnackBar } = useSnackBar();
   
   const [duplicateLead, { loading }] = useMutation(DUPLICATE_LEAD_MUTATION, {
     onCompleted: (data) => {
       if (data?.duplicateLead) {
-        enqueueSnackBar(
-          `Lead duplicated successfully: ${data.duplicateLead.leadNo}`,
-          {
-            variant: 'success',
-          },
-        );
+        enqueueSuccessSnackBar({
+          message: `Lead duplicated successfully: ${data.duplicateLead.leadNo}`,
+        });
         
         if (onSuccess) {
           onSuccess(data.duplicateLead.id);
@@ -52,8 +49,8 @@ export const DuplicateLeadButton = ({
       }
     },
     onError: (error) => {
-      enqueueSnackBar(`Failed to duplicate lead: ${error.message}`, {
-        variant: 'error',
+      enqueueErrorSnackBar({
+        message: `Failed to duplicate lead: ${error.message}`,
       });
     },
   });

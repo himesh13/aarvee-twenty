@@ -3,7 +3,7 @@ import { useQuery, useMutation } from '@apollo/client';
 import { gql } from '@apollo/client';
 import styled from '@emotion/styled';
 import { Button } from 'twenty-ui/input';
-import { IconCheck, IconClock, IconPlus } from 'twenty-ui';
+import { IconCheck, IconClock, IconPlus } from 'twenty-ui/display';
 
 import { useSnackBar } from '@/ui/feedback/snack-bar-manager/hooks/useSnackBar';
 
@@ -142,7 +142,7 @@ interface ReminderPanelProps {
  * - Real-time updates
  */
 export const ReminderPanel = ({ leadId }: ReminderPanelProps) => {
-  const { enqueueSnackBar } = useSnackBar();
+  const { enqueueSuccessSnackBar, enqueueErrorSnackBar } = useSnackBar();
   const [showCreateForm, setShowCreateForm] = useState(false);
 
   const { data, loading, refetch } = useQuery(GET_REMINDERS_QUERY, {
@@ -152,12 +152,12 @@ export const ReminderPanel = ({ leadId }: ReminderPanelProps) => {
 
   const [completeReminder] = useMutation(COMPLETE_REMINDER_MUTATION, {
     onCompleted: () => {
-      enqueueSnackBar('Reminder marked as completed', { variant: 'success' });
+      enqueueSuccessSnackBar({ message: 'Reminder marked as completed' });
       refetch();
     },
     onError: (error) => {
-      enqueueSnackBar(`Failed to complete reminder: ${error.message}`, {
-        variant: 'error',
+      enqueueErrorSnackBar({
+        message: `Failed to complete reminder: ${error.message}`,
       });
     },
   });
